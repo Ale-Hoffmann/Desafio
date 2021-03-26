@@ -11,9 +11,9 @@ Jogo::~Jogo()
 void Jogo::inicializar()
 {
 	uniInicializar(800, 600, false);
+	principal.inicializar();
 
-	//	O resto da inicialização vem aqui!
-	//	...
+
 }
 
 void Jogo::finalizar()
@@ -30,8 +30,26 @@ void Jogo::executar()
 	{
 		uniIniciarFrame();
 
-		//	Seu código vem aqui!
-		//	...
+		principal.executar();
+
+		if (gTeclado.segurando[TECLA_D])
+		{
+			principal.moverDir();
+		}
+		if (gTeclado.segurando[TECLA_A])
+		{
+			principal.moverEsc();
+		}
+		if (gTeclado.segurando[TECLA_W])
+		{
+			principal.moverCima();
+		}
+		if (gTeclado.segurando[TECLA_S])
+		{
+			principal.moverBaixo();
+		}
+		
+
 
 		uniTerminarFrame();
 	}

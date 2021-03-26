@@ -101,9 +101,13 @@
   <ItemGroup>
     <ClCompile Include="Jogo.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Personagem.cpp" />
+    <ClCompile Include="Tela.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Jogo.h" />
+    <ClInclude Include="Personagem.h" />
+    <ClInclude Include="Tela.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
