@@ -31,23 +31,7 @@ void Jogo::executar()
 		uniIniciarFrame();
 
 		principal.executar();
-
-		if (gTeclado.segurando[TECLA_D])
-		{
-			principal.moverDir();
-		}
-		if (gTeclado.segurando[TECLA_A])
-		{
-			principal.moverEsc();
-		}
-		if (gTeclado.segurando[TECLA_W])
-		{
-			principal.moverCima();
-		}
-		if (gTeclado.segurando[TECLA_S])
-		{
-			principal.moverBaixo();
-		}
+		
 		
 
 

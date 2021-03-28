@@ -99,12 +99,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Item.cpp" />
     <ClCompile Include="Jogo.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Personagem.cpp" />
     <ClCompile Include="Tela.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Item.h" />
     <ClInclude Include="Jogo.h" />
     <ClInclude Include="Personagem.h" />
     <ClInclude Include="Tela.h" />

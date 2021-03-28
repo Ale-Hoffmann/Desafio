@@ -1,5 +1,18 @@
 #include "Personagem.h"
 
+Personagem::Personagem()
+{
+
+}
+
+Personagem::Personagem(int x, int y, int v, int e)
+{
+	xPer = x;
+	yPer = y;
+	vida = v;
+	energia = e;
+}
+
 void Personagem::inicializar()
 {
 	gRecursos.carregarSpriteSheet("Player", "../assets/Player.png",1,2);
@@ -14,24 +27,32 @@ void Personagem::executar()
 {
      player.desenhar(xPer,yPer);
 	 player.avancarAnimacao();
+	 mover();
 }
 
-void Personagem::moverDir()
+
+
+void Personagem::mover()
 {
-	xPer++;
+	if (gTeclado.segurando[TECLA_D])
+	{
+		xPer++;
+	}
+	if (gTeclado.segurando[TECLA_A])
+	{
+		xPer--;
+	}
+	if (gTeclado.segurando[TECLA_W])
+	{
+		yPer--;
+	}
+	if (gTeclado.segurando[TECLA_S])
+	{
+		yPer++;
+	}
 }
 
-void Personagem::moverEsc()
+void Personagem::atacar()
 {
-	xPer--;
-}
 
-void Personagem::moverCima()
-{
-	yPer--;
-}
-
-void Personagem::moverBaixo()
-{
-	yPer++;
 }
