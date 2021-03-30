@@ -37,22 +37,31 @@ void Personagem::mover()
 	if (gTeclado.segurando[TECLA_D])
 	{
 		xPer++;
+		direcao = "direita";
 	}
 	if (gTeclado.segurando[TECLA_A])
 	{
 		xPer--;
+		direcao = "esquerda";
 	}
 	if (gTeclado.segurando[TECLA_W])
 	{
 		yPer--;
+		direcao = "cima";
 	}
 	if (gTeclado.segurando[TECLA_S])
 	{
 		yPer++;
+		direcao = "baixo";
 	}
 }
 
 void Personagem::atacar()
 {
 
+}
+
+string Personagem::getDirecao()
+{
+	return direcao;
 }

@@ -10,8 +10,11 @@ public:
 	void mover();
 	void atacar();
 
+	string getDirecao();
+
 private:
 	Sprite player;
+	string direcao;
 	int xPer, yPer,vida,energia;
 };
 
