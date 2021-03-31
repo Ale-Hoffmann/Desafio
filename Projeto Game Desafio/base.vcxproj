@@ -99,6 +99,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Cura.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="Jogo.cpp" />
     <ClCompile Include="main.cpp" />
@@ -106,6 +107,7 @@
     <ClCompile Include="Tela.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Cura.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="Jogo.h" />
     <ClInclude Include="Personagem.h" />

@@ -4,10 +4,13 @@ class Item
 {
 public:
 	Item();
+	void carregar();
+	void executar();
 	void setPreco(int p);
 	void setValor(int v);
+	void setXY(int x,int y);
 	void setTag(string t);
-	
+	void setImagem(string nome, string endereço);
 	
 	string getTag();
 	int getPreco();
@@ -16,8 +19,8 @@ public:
 
 
 private:
-	int preco, valor;
-	string tag;
+	int preco, valor,X,Y;
+	string tag,endImagem,nomeImagem;
 	Sprite imagem;
 };
 
