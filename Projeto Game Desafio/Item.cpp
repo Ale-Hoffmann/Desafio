@@ -8,7 +8,7 @@ void Item::carregar()
 {
 	gRecursos.carregarSpriteSheet(nomeImagem, endImagem);
 	imagem.setSpriteSheet(nomeImagem);
-	imagem.setEscala(0.5, 0.5);
+	imagem.setEscala(0.1, 0.1);
 }
 
 void Item::executar()
@@ -58,4 +58,19 @@ int Item::getPreco()
 int Item::getValor()
 {
 	return valor;
+}
+
+int Item::getX()
+{
+	return X;
+}
+
+int Item::getY()
+{
+	return Y;
+}
+
+Sprite Item::getImagem()
+{
+	return imagem;
 }

@@ -6,6 +6,6 @@ public:
 	Cura();
 	Cura(int tm);
 private:
-	
+	int tipo;
 };
 

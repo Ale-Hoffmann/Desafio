@@ -10,6 +10,9 @@ public:
 	void mover();
 	void atacar();
 
+	int getX();
+	int getY();
+	Sprite getImagem();
 	string getDirecao();
 
 private:

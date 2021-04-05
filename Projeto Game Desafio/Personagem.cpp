@@ -26,7 +26,6 @@ void Personagem::inicializar()
 void Personagem::executar()
 {
      player.desenhar(xPer,yPer);
-	 player.avancarAnimacao();
 	 mover();
 }
 
@@ -38,27 +37,50 @@ void Personagem::mover()
 	{
 		xPer++;
 		direcao = "direita";
+		player.avancarAnimacao();
+		return;
 	}
 	if (gTeclado.segurando[TECLA_A])
 	{
 		xPer--;
 		direcao = "esquerda";
+		player.avancarAnimacao();
+		return;
 	}
 	if (gTeclado.segurando[TECLA_W])
 	{
 		yPer--;
 		direcao = "cima";
+		player.avancarAnimacao();
+		return;
 	}
 	if (gTeclado.segurando[TECLA_S])
 	{
 		yPer++;
 		direcao = "baixo";
+		player.avancarAnimacao();
+		return;
 	}
 }
 
 void Personagem::atacar()
 {
 
+}
+
+int Personagem::getX()
+{
+	return xPer;
+}
+
+int Personagem::getY()
+{
+	return yPer;
+}
+
+Sprite Personagem::getImagem()
+{
+	return player;
 }
 
 string Personagem::getDirecao()

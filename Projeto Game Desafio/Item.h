@@ -11,11 +11,14 @@ public:
 	void setXY(int x,int y);
 	void setTag(string t);
 	void setImagem(string nome, string endereço);
+
 	
 	string getTag();
 	int getPreco();
 	int getValor();
-
+	int getX();
+	int getY();
+	Sprite getImagem();
 
 
 private:
