@@ -9,11 +9,16 @@ public:
 	void executar();
 	void mover();
 	void atacar();
+	void contato(string tp, int vl);
+
 
 	int getX();
 	int getY();
+	int getVida();
 	Sprite getImagem();
 	string getDirecao();
+	string getTxtVida();
+
 
 private:
 	Sprite player;

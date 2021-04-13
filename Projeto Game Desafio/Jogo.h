@@ -1,7 +1,5 @@
 #pragma once
-#include"Cura.h"
-#include"Personagem.h"
-#include "libUnicornio.h"
+#include"Tela.h"
 
 class Jogo
 {
@@ -13,9 +11,8 @@ public:
 	void finalizar();
 	void executar();
 
-	void colisão();
+	
 private:
-	Personagem principal;
-	Cura* teste;
+	Tela teste;
 };
 

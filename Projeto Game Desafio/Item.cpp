@@ -6,14 +6,16 @@ Item::Item()
 
 void Item::carregar()
 {
-	gRecursos.carregarSpriteSheet(nomeImagem, endImagem);
+	gRecursos.carregarSpriteSheet(nomeImagem, endImagem,1,10);
 	imagem.setSpriteSheet(nomeImagem);
-	imagem.setEscala(0.1, 0.1);
+	imagem.setEscala(2,2);
+	imagem.setAnimacao(0);
 }
 
 void Item::executar()
 {
 	imagem.desenhar(X, Y);
+	imagem.avancarAnimacao();
 }
 
 void Item::setPreco(int p)

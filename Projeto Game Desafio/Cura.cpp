@@ -17,14 +17,14 @@ Cura::Cura(int tm)
 	{
 	case 1:
 		setPreco(15);
-		setValor(25);
+		setValor(1);
 
 	case 2:
 		setPreco(30);
-		setValor(50);
+		setValor(2);
 	case 3:
 		setPreco(60);
-		setValor(100);
+		setValor(4);
 	default:
 		break;
 	}
