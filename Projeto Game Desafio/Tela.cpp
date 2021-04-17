@@ -9,6 +9,7 @@ void Tela::inicializar()
 {
 	teste = new Cura(1);
 	teste->setXY(100, 100);
+	carregarArquivo();
 	principal.inicializar();
 	teste->carregar();
 	carregarSprite();
@@ -26,16 +27,47 @@ void Tela::executar()
 
 void Tela::carregarSprite()
 {
-	gRecursos.carregarSpriteSheet("fundoTela", "../assets/mapa.jpg");
-	fundo.setSpriteSheet("fundoTela");
+	gRecursos.carregarSpriteSheet(nSprite,EndSprite);
+	fundo.setSpriteSheet(nSprite);
 	fundo.setEscala(1.2, 1.5);
 }
 
 void Tela::carregarTexto()
 {
-	gRecursos.carregarFonte("TextoVida", "../assets/pixelplay.ttf");
-	TxtVida.setFonte("TextoVida");
+	gRecursos.carregarFonte(nTexto, EndTexto);
+	TxtVida.setFonte(nTexto);
 	TxtVida.setAlinhamento(TEXTO_CENTRALIZADO);
+}
+
+void Tela::carregarArquivo()
+{
+	string dado;
+
+		ifstream lerArq;
+		lerArq.open("arqTela.txt", ios::in);
+		if (lerArq.is_open())
+		{
+			do
+			{
+				lerArq >> dado;
+				if (dado == "texto")
+				{
+					lerArq >> dado;
+					nTexto = dado;
+					lerArq >> dado;
+					EndTexto = dado;
+				}
+				if (dado == "sprite")
+				{
+					lerArq >> dado;
+					nSprite = dado;
+					lerArq >> dado;
+					EndSprite = dado;
+				}
+			} while (!lerArq.eof());
+
+		}
+	
 }
 
 void Tela::atualizarSprite()

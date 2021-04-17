@@ -1,4 +1,5 @@
 #pragma once
+#include<fstream>
 #include"Personagem.h"
 #include"Cura.h"
 class Tela
@@ -10,6 +11,7 @@ public:
 
 	void carregarSprite();
 	void carregarTexto();
+	void carregarArquivo();
 	void atualizarSprite();
 	void atualizarTexto();
 	void colisão();
@@ -19,5 +21,6 @@ private:
 	Cura* teste;
 	Texto TxtVida;
 	Sprite fundo;
+	string nSprite, EndSprite, nTexto, EndTexto;
 };
 
