@@ -1,6 +1,6 @@
 #pragma once
-#include"Tela.h"
-
+#include"TelaCombate.h"
+#include"TelaMenu.h"
 class Jogo
 {
 public:
@@ -10,9 +10,11 @@ public:
 	void inicializar();
 	void finalizar();
 	void executar();
+	void passaTela();
 
 	
 private:
-	Tela teste;
+	Tela *teste[2];
+	int qTelas, telaAtual;
 };
 

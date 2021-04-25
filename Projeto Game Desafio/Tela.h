@@ -2,25 +2,24 @@
 #include<fstream>
 #include"Personagem.h"
 #include"Cura.h"
+#include"Inimigo.h"
 class Tela
 {
 public:
 	Tela();
-	void inicializar();
-	void executar();
+	virtual void inicializar() = 0;
+	virtual void executar() = 0;
 
-	void carregarSprite();
-	void carregarTexto();
-	void carregarArquivo();
-	void atualizarSprite();
-	void atualizarTexto();
-	void colisão();
+	virtual void carregarSprite() = 0;
+	virtual void carregarTexto() = 0;
+	virtual void carregarArquivo() = 0;
+	virtual void atualizarSprite() = 0;
+	virtual void atualizarTexto() = 0;
+
+	virtual bool Jogou()=0;
+	
 
 private:
-	Personagem principal;
-	Cura* teste;
-	Texto TxtVida;
-	Sprite fundo;
-	string nSprite, EndSprite, nTexto, EndTexto;
+	
 };
 

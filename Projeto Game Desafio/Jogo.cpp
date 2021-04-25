@@ -2,7 +2,10 @@
 
 Jogo::Jogo()
 {
-	
+	teste[0] = new TelaMenu;
+	teste[1] = new TelaCombate;
+	qTelas = 2;
+	telaAtual = 0;
 }
 
 Jogo::~Jogo()
@@ -12,8 +15,10 @@ Jogo::~Jogo()
 void Jogo::inicializar()
 {
 	uniInicializar(800, 600, false);
-	teste.inicializar();
-	
+	for (int i = 0; i < qTelas; i++)
+	{
+		teste[i]->inicializar();
+	}
 }
 
 void Jogo::finalizar()
@@ -29,12 +34,26 @@ void Jogo::executar()
 	while(!gTeclado.soltou[TECLA_ESC] && !gEventos.sair)
 	{
 		uniIniciarFrame();
-
-		teste.executar();
-
-
+		passaTela();
 		uniTerminarFrame();
 	
 	}
+}
+
+void Jogo::passaTela()
+{
+	if (teste[telaAtual]->Jogou() == true)
+	{
+		telaAtual++;
+	}
+	if (gTeclado.pressionou[TECLA_T]&& telaAtual<qTelas)
+	{
+		telaAtual++;
+	}
+	if (gTeclado.pressionou[TECLA_T] && telaAtual == qTelas)
+	{
+		telaAtual = 0;
+	}
+	teste[telaAtual]->executar();
 }
 

@@ -100,18 +100,24 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Cura.cpp" />
+    <ClCompile Include="Inimigo.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="Jogo.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Personagem.cpp" />
     <ClCompile Include="Tela.cpp" />
+    <ClCompile Include="TelaCombate.cpp" />
+    <ClCompile Include="TelaMenu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cura.h" />
+    <ClInclude Include="Inimigo.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="Jogo.h" />
     <ClInclude Include="Personagem.h" />
     <ClInclude Include="Tela.h" />
+    <ClInclude Include="TelaCombate.h" />
+    <ClInclude Include="TelaMenu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
