@@ -34,6 +34,7 @@ void TelaCombate::executar()
 	atualizarSprite();
 	atualizarTexto();
 	principal.executar();
+	colisão();
 	for (int i = 0; i < quantItens; i++)
 	{
 		itens[i].executar();
@@ -89,6 +90,10 @@ void TelaCombate::carregarArquivo()
 
 }
 
+void TelaCombate::atualizarValorVida(int a)
+{
+}
+
 void TelaCombate::atualizarSprite()
 {
 	fundo.desenhar(gJanela.getLargura() / 2, gJanela.getAltura() / 2);
@@ -97,7 +102,11 @@ void TelaCombate::atualizarSprite()
 void TelaCombate::atualizarTexto()
 {
 	vida.setString(principal.getTxtVida());
-    vida.desenhar(500, 100);
+	vida.desenhar(500, 100);
+	
+
+	
+    
 }
 
 bool TelaCombate::Jogou()

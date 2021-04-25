@@ -2,7 +2,7 @@
 
 Personagem::Personagem()
 {
-	vida = 3;
+	vida = 2;
 }
 
 Personagem::Personagem(int x, int y, int v, int e)
@@ -72,7 +72,7 @@ void Personagem::contato(string tp, int vl)
 {
 		if (tp == "cura")
 		{
-			vida += vl;
+			vida = vida + vl;
 		}
 	
 }

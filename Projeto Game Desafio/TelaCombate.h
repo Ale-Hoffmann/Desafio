@@ -12,7 +12,7 @@ public:
     void carregarTexto() override;
     void carregarArquivo() override;
 
-
+    void atualizarValorVida(int a);
     void atualizarSprite() override;
     void atualizarTexto() override;
     bool Jogou() override;

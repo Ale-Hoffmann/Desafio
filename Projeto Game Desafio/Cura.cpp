@@ -10,21 +10,25 @@ Cura::Cura()
 
 Cura::Cura(int tm)
 {
+	setTag("cura");
 	setImagem("Potion", "../assets/Potion.png");
-	tipo = tm;
+	
 	//setImagem(nome , endereço);
-	switch (tipo)
+	switch (tm)
 	{
 	case 1:
 		setPreco(15);
 		setValor(1);
+		break;
 
 	case 2:
 		setPreco(30);
 		setValor(2);
+		break;
 	case 3:
 		setPreco(60);
-		setValor(4);
+		setValor(3);
+		break;
 	default:
 		break;
 	}
