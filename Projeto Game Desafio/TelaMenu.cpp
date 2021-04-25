@@ -76,7 +76,7 @@ void TelaMenu::carregarBotao()
 {
 	gRecursos.carregarSpriteSheet(nBotao, EndBotao);
 	jogar.setSpriteSheet(nBotao);
-	jogar.setPos(200,200);
+	jogar.setPos(500,300);
 }
 
 void TelaMenu::atualizarSprite()
@@ -86,7 +86,7 @@ void TelaMenu::atualizarSprite()
 
 void TelaMenu::atualizarTexto()
 {
-	titulo.setString("JOGO DESAFIO");
+	titulo.setString("O DESAFIO");
 	titulo.desenhar(505, 100);
 }
 
