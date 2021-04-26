@@ -6,6 +6,7 @@ public:
 	Item();
 	void carregar();
 	void executar();
+	void finalizar();
 	void setPreco(int p);
 	void setValor(int v);
 	void setXY(int x,int y);

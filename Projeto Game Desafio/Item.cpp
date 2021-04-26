@@ -18,6 +18,8 @@ void Item::executar()
 	imagem.avancarAnimacao();
 }
 
+
+
 void Item::setPreco(int p)
 {
 	preco = p;

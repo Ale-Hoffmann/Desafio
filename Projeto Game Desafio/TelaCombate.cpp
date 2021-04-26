@@ -103,10 +103,6 @@ void TelaCombate::atualizarTexto()
 {
 	vida.setString(principal.getTxtVida());
 	vida.desenhar(500, 100);
-	
-
-	
-    
 }
 
 bool TelaCombate::Jogou()

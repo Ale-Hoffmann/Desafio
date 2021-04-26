@@ -33,28 +33,28 @@ void Personagem::executar()
 
 void Personagem::mover()
 {
-	if (gTeclado.segurando[TECLA_D])
+	if (gTeclado.segurando[TECLA_D] && xPer < gJanela.getLargura())
 	{
 		xPer++;
 		direcao = "direita";
 		player.avancarAnimacao();
 		return;
 	}
-	if (gTeclado.segurando[TECLA_A])
+	if (gTeclado.segurando[TECLA_A] && xPer > 0)
 	{
 		xPer--;
 		direcao = "esquerda";
 		player.avancarAnimacao();
 		return;
 	}
-	if (gTeclado.segurando[TECLA_W])
+	if (gTeclado.segurando[TECLA_W] && yPer > 0)
 	{
 		yPer--;
 		direcao = "cima";
 		player.avancarAnimacao();
 		return;
 	}
-	if (gTeclado.segurando[TECLA_S])
+	if (gTeclado.segurando[TECLA_S] && yPer < gJanela.getAltura())
 	{
 		yPer++;
 		direcao = "baixo";
