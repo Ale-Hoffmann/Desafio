@@ -46,30 +46,27 @@ void Inimigo::andar()
 
 	case 2:
 
-		if (Xtarget > X)
+		if (distancia == 0)
 		{
-			X++;
+			ir = true;
 		}
-		 if (Xtarget < X)
+		if (distancia == Mdistancia)
 		{
-			X--;
+			ir = false;
 		}
-		 if (Xtarget == X)
-		{
 
-		}
-		if (Ytarget > Y)
+		if (ir)
 		{
+			distancia++;
 			Y++;
 		}
-		 if (Ytarget < Y)
+		else
 		{
+			distancia--;
 			Y--;
 		}
-		 if (Ytarget == Y)
-		{
 
-		}
+
 		break;
 
 	default:

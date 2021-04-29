@@ -2,6 +2,7 @@
 #include"TelaCombate.h"
 #include"TelaMenu.h"
 #include"TelaMorte.h"
+#include"TelaControles.h"
 class Jogo
 {
 public:
@@ -15,7 +16,7 @@ public:
 
 	
 private:
-	Tela *teste[3];
+	Tela *teste[4];
 	int qTelas, telaAtual;
 };
 

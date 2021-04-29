@@ -3,7 +3,7 @@
 TelaCombate::TelaCombate()
 {
 	quantInim = 2;
-	spawn = new Inimigo[quantInim];
+	
 	quantItens = 1;
 	itens = new Cura[quantItens];
 	vagabundo = new Bicho[quantInim];

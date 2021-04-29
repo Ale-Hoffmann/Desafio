@@ -5,9 +5,10 @@ Jogo::Jogo()
 	//polimorfismo
 	
 	teste[0] = new TelaMenu;
-	teste[1] = new TelaCombate;
-	teste[2] = new TelaMorte;
-	qTelas = 3;
+	teste[1] = new TelaControles;
+	teste[2] = new TelaCombate;
+	teste[3] = new TelaMorte;
+	qTelas = 4;
 	telaAtual = 0;
 }
 
