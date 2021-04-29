@@ -11,11 +11,11 @@ public:
     void carregarSprite() override;
     void carregarTexto() override;
     void carregarArquivo() override;
+    bool Jogou() override;
 
-    void atualizarValorVida(int a);
     void atualizarSprite() override;
     void atualizarTexto() override;
-    bool Jogou() override;
+   
   
     void colisão();
 private:
@@ -26,5 +26,6 @@ private:
     Cura* itens;
     Personagem principal;
     string nSprite, EndSprite, nTexto, EndTexto;
+    Bicho *vagabundo;
 };
 

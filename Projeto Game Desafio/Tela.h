@@ -2,7 +2,8 @@
 #include<fstream>
 #include"Personagem.h"
 #include"Cura.h"
-#include"Inimigo.h"
+#include"Bicho.h"
+
 class Tela
 {
 public:

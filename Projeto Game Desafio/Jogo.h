@@ -1,6 +1,7 @@
 #pragma once
 #include"TelaCombate.h"
 #include"TelaMenu.h"
+#include"TelaMorte.h"
 class Jogo
 {
 public:
@@ -14,7 +15,7 @@ public:
 
 	
 private:
-	Tela *teste[2];
+	Tela *teste[3];
 	int qTelas, telaAtual;
 };
 

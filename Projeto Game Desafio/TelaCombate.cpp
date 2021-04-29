@@ -6,9 +6,12 @@ TelaCombate::TelaCombate()
 	spawn = new Inimigo[quantInim];
 	quantItens = 1;
 	itens = new Cura[quantItens];
+	vagabundo = new Bicho[quantInim];
 	Cura a(1);
 	itens[0] = a;
 	itens[0].setXY(100, 100);
+	vagabundo[0].setPosicao(500, 500);
+	vagabundo[1].setPosicao(500, 200);
 }
 
 TelaCombate::~TelaCombate()
@@ -25,12 +28,18 @@ void TelaCombate::inicializar()
 	{
 		itens[i].carregar();
 	}
+	for (int i = 0; i < quantInim; i++)
+	{
+		vagabundo[i].inicializar();
+	}
+	
 	carregarSprite();
 	carregarTexto();
 }
 
 void TelaCombate::executar()
 {
+	
 	atualizarSprite();
 	atualizarTexto();
 	principal.executar();
@@ -39,6 +48,10 @@ void TelaCombate::executar()
 	{
 		itens[i].executar();
 	}
+	for (int i = 0; i < quantInim; i++)
+	{
+		vagabundo[i].executar();
+	}
 	
 }
 
@@ -46,7 +59,7 @@ void TelaCombate::carregarSprite()
 {
 	gRecursos.carregarSpriteSheet(nSprite, EndSprite);
 	fundo.setSpriteSheet(nSprite);
-	fundo.setEscala(1.2, 1.5);
+	fundo.setEscala(1.2, 1.07);
 }
 
 void TelaCombate::carregarTexto()
@@ -54,6 +67,7 @@ void TelaCombate::carregarTexto()
 	gRecursos.carregarFonte(nTexto, EndTexto);
 	vida.setFonte(nTexto);
 	vida.setAlinhamento(TEXTO_CENTRALIZADO);
+	vida.setEscala(1.5, 1.5);
 }
 
 void TelaCombate::carregarArquivo()
@@ -90,9 +104,20 @@ void TelaCombate::carregarArquivo()
 
 }
 
-void TelaCombate::atualizarValorVida(int a)
+bool TelaCombate::Jogou()
 {
+	if (principal.getVivo() == false)
+	{
+		return true;
+	}
+    
+	else
+	{
+		return false;
+	}
 }
+
+
 
 void TelaCombate::atualizarSprite()
 {
@@ -102,13 +127,9 @@ void TelaCombate::atualizarSprite()
 void TelaCombate::atualizarTexto()
 {
 	vida.setString(principal.getTxtVida());
-	vida.desenhar(500, 100);
+	vida.desenhar(110, 30);
 }
 
-bool TelaCombate::Jogou()
-{
-	return false;
-}
 
 void TelaCombate::colisão()
 {
@@ -119,11 +140,22 @@ void TelaCombate::colisão()
 		{
 			principal.contato(itens[i].getTag(), itens[i].getValor());
 
-			itens[i].setXY(400, 400);
+			itens[i].setXY(1200, 400);
 		}
 	}
 	for (int i = 0; i < quantInim; i++)
 	{
+		if (uniTestarColisao(principal.getImagem(), principal.getX(), principal.getY(), 0,
+			vagabundo[i].getSprite(), vagabundo[i].getX(), vagabundo[i].getY(), 0))
+		{
+			principal.contatoInimigo(vagabundo[i].getX(), vagabundo[i].getY());
 
+
+		}
+		if (gTeclado.pressionou[TECLA_ESPACO] && uniTestarColisao(principal.getArma().getImagem(), principal.getArma().getX(), principal.getArma().getY(), 0,
+			vagabundo[i].getSprite(), vagabundo[i].getX(), vagabundo[i].getY(), 0))
+		{
+			vagabundo[i].setPosicao(1200, 400);
+		}
 	}
 }

@@ -2,14 +2,18 @@
 
 Jogo::Jogo()
 {
+	//polimorfismo
+	
 	teste[0] = new TelaMenu;
 	teste[1] = new TelaCombate;
-	qTelas = 2;
+	teste[2] = new TelaMorte;
+	qTelas = 3;
 	telaAtual = 0;
 }
 
 Jogo::~Jogo()
 {
+
 }
 
 void Jogo::inicializar()
@@ -42,18 +46,23 @@ void Jogo::executar()
 
 void Jogo::passaTela()
 {
-	if (teste[telaAtual]->Jogou() == true)
+	if (teste[telaAtual]->Jogou() == true && telaAtual < qTelas - 1)
 	{
 		telaAtual++;
 	}
-	if (gTeclado.pressionou[TECLA_T]&& telaAtual<qTelas)
+	if (teste[telaAtual]->Jogou() == true && telaAtual == qTelas-1)
+	{
+		finalizar();
+		
+	}
+	/*if (gTeclado.pressionou[TECLA_T]&& telaAtual<qTelas-1)
 	{
 		telaAtual++;
 	}
-	if (gTeclado.pressionou[TECLA_T] && telaAtual == qTelas)
+	if (gTeclado.pressionou[TECLA_T] && telaAtual == qTelas-1)
 	{
 		telaAtual = 0;
-	}
+	}*/
 	teste[telaAtual]->executar();
 }
 
