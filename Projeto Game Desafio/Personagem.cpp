@@ -18,7 +18,7 @@ void Personagem::inicializar()
 {
 	gRecursos.carregarSpriteSheet("Player", "../assets/Player.png",4,4);
 	player.setSpriteSheet("Player");
-	player.setEscala(2, 2);
+	player.setEscala(0.5, 0.5);
 	player.setAnimacao(0);
 	xPer = gJanela.getLargura() / 2;
 	yPer = gJanela.getAltura() / 2;

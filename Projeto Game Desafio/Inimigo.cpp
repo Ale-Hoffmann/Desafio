@@ -82,10 +82,13 @@ void Inimigo::setSprite(string a, string b)
 
 void Inimigo::carregarSprite()
 {
-	gRecursos.carregarSpriteSheet(nCorpo, EndCorpo,1,2);
-	corpo.setSpriteSheet(nCorpo);
-	corpo.setEscala(0.5, 0.5);
-	corpo.setAnimacao(0);
+	if (!gRecursos.carregouSpriteSheet(nCorpo))
+	{ gRecursos.carregarSpriteSheet(nCorpo, EndCorpo, 1, 2); }
+
+		corpo.setSpriteSheet(nCorpo);
+		corpo.setEscala(0.5, 0.5);
+		corpo.setAnimacao(0);
+	
 }
 
 void Inimigo::executarSprite()
