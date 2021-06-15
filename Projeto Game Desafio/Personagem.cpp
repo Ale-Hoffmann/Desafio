@@ -16,7 +16,7 @@ Personagem::Personagem(int x, int y, int v, int e)
 
 void Personagem::inicializar()
 {
-	gRecursos.carregarSpriteSheet("Player", "../assets/Player.png",4,4);
+	gRecursos.carregarSpriteSheet("Player", "../assets/Player1.png",6,3);
 	player.setSpriteSheet("Player");
 	player.setEscala(0.5, 0.5);
 	player.setAnimacao(0);
@@ -42,7 +42,7 @@ void Personagem::mover()
 	{
 		xPer++;
 		direcao = "direita";
-		player.setAnimacao(1);
+		player.setAnimacao(0);
 		player.avancarAnimacao();
 		arma.setarPosicao(xPer + 30, yPer);
 		return;
@@ -52,7 +52,7 @@ void Personagem::mover()
 		xPer--;
 		direcao = "esquerda";
 		arma.setarPosicao(xPer - 30, yPer);
-		player.setAnimacao(2);
+		player.setAnimacao(1);
 		player.avancarAnimacao();
 		return;
 	}
@@ -61,7 +61,7 @@ void Personagem::mover()
 		yPer--;
 		direcao = "cima";
 		arma.setarPosicao(xPer, yPer - 30); 
-		player.setAnimacao(3);
+		player.setAnimacao(5);
 		player.avancarAnimacao();
 		return;
 	}
@@ -70,7 +70,7 @@ void Personagem::mover()
 		yPer++;
 		direcao = "baixo";
 		arma.setarPosicao(xPer, yPer+30);
-		player.setAnimacao(0);
+		player.setAnimacao(4);
 		player.avancarAnimacao();
 		return;
 	}
