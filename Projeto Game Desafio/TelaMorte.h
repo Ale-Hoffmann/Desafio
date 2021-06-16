@@ -16,6 +16,7 @@ class TelaMorte :
 	void atualizarBotao();
 
     bool Jogou();
+	int proximaTela();
 
 private:
 	string nSprite, EndSprite, nTexto, EndTexto, nBotao, EndBotao;

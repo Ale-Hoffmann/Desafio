@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Tela.cpp">
+      <Filter>TELAS</Filter>
+    </ClCompile>
+    <ClCompile Include="TelaCombate.cpp">
+      <Filter>TELAS</Filter>
+    </ClCompile>
+    <ClCompile Include="TelaControles.cpp">
+      <Filter>TELAS</Filter>
+    </ClCompile>
+    <ClCompile Include="TelaMenu.cpp">
+      <Filter>TELAS</Filter>
+    </ClCompile>
+    <ClCompile Include="TelaMorte.cpp">
+      <Filter>TELAS</Filter>
+    </ClCompile>
+    <ClCompile Include="Inimigo.cpp">
+      <Filter>INIMIGOS</Filter>
+    </ClCompile>
+    <ClCompile Include="Bicho.cpp">
+      <Filter>INIMIGOS</Filter>
+    </ClCompile>
+    <ClCompile Include="Cura.cpp">
+      <Filter>ITENS</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>ITENS</Filter>
+    </ClCompile>
+    <ClCompile Include="Arma.cpp">
+      <Filter>ITENS</Filter>
+    </ClCompile>
+    <ClCompile Include="Personagem.cpp">
+      <Filter>BASICO</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>BASICO</Filter>
+    </ClCompile>
+    <ClCompile Include="Jogo.cpp">
+      <Filter>BASICO</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Tela.h">
+      <Filter>TELAS</Filter>
+    </ClInclude>
+    <ClInclude Include="TelaCombate.h">
+      <Filter>TELAS</Filter>
+    </ClInclude>
+    <ClInclude Include="TelaControles.h">
+      <Filter>TELAS</Filter>
+    </ClInclude>
+    <ClInclude Include="TelaMenu.h">
+      <Filter>TELAS</Filter>
+    </ClInclude>
+    <ClInclude Include="TelaMorte.h">
+      <Filter>TELAS</Filter>
+    </ClInclude>
+    <ClInclude Include="Inimigo.h">
+      <Filter>INIMIGOS</Filter>
+    </ClInclude>
+    <ClInclude Include="Bicho.h">
+      <Filter>INIMIGOS</Filter>
+    </ClInclude>
+    <ClInclude Include="Cura.h">
+      <Filter>ITENS</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>ITENS</Filter>
+    </ClInclude>
+    <ClInclude Include="Arma.h">
+      <Filter>ITENS</Filter>
+    </ClInclude>
+    <ClInclude Include="NodoP.h">
+      <Filter>MATÉRIAS</Filter>
+    </ClInclude>
+    <ClInclude Include="Pilha.h">
+      <Filter>MATÉRIAS</Filter>
+    </ClInclude>
+    <ClInclude Include="NodoF.h">
+      <Filter>MATÉRIAS</Filter>
+    </ClInclude>
+    <ClInclude Include="Nodo.h">
+      <Filter>MATÉRIAS</Filter>
+    </ClInclude>
+    <ClInclude Include="Lista.h">
+      <Filter>MATÉRIAS</Filter>
+    </ClInclude>
+    <ClInclude Include="Fila.h">
+      <Filter>MATÉRIAS</Filter>
+    </ClInclude>
+    <ClInclude Include="Personagem.h">
+      <Filter>BASICO</Filter>
+    </ClInclude>
+    <ClInclude Include="Jogo.h">
+      <Filter>BASICO</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="TELAS">
+      <UniqueIdentifier>{c6eb7161-17fc-40af-a392-2b5a71e11dc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="INIMIGOS">
+      <UniqueIdentifier>{436008e1-80d0-4218-a0bd-55b9f42f90da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ITENS">
+      <UniqueIdentifier>{945ad046-de03-4abc-b711-ad4bdb5dce13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MATÉRIAS">
+      <UniqueIdentifier>{1cefd25e-9668-48a3-adfc-fd05b77124a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BASICO">
+      <UniqueIdentifier>{f50478c3-35ad-499c-af00-7702e7e975bf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

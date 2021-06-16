@@ -104,3 +104,8 @@ bool TelaMorte::Jogou()
 		return false;
 	}
 }
+
+int TelaMorte::proximaTela()
+{
+	return 0;
+}

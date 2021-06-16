@@ -12,6 +12,7 @@ public:
     void carregarTexto() override;
     void carregarArquivo() override;
     bool Jogou() override;
+    int proximaTela();
 
     void atualizarSprite() override;
     void atualizarTexto() override;

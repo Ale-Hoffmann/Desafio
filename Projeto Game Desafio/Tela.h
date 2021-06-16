@@ -18,6 +18,7 @@ public:
 	virtual void atualizarTexto() = 0;
 
 	virtual bool Jogou()=0;
+	virtual int proximaTela()=0;
 	
 
 private:

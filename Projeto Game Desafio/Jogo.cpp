@@ -47,15 +47,15 @@ void Jogo::executar()
 
 void Jogo::passaTela()
 {
-	if (teste[telaAtual]->Jogou() == true && telaAtual < qTelas - 1)
+	if (teste[telaAtual]->Jogou() == true)
 	{
-		telaAtual++;
+		telaAtual = teste[telaAtual]->proximaTela();
 	}
-	if (teste[telaAtual]->Jogou() == true && telaAtual == qTelas-1)
+	/*if (teste[telaAtual]->Jogou() == true && telaAtual == qTelas-1)
 	{
 		finalizar();
 		
-	}
+	}*/
 	/*if (gTeclado.pressionou[TECLA_T]&& telaAtual<qTelas-1)
 	{
 		telaAtual++;
@@ -66,4 +66,6 @@ void Jogo::passaTela()
 	}*/
 	teste[telaAtual]->executar();
 }
+
+
 

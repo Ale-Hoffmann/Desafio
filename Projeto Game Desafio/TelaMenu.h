@@ -4,8 +4,8 @@ class TelaMenu :
     public Tela
 {
 public:
-    
-        void inicializar() override;
+    TelaMenu();
+     void inicializar() override;
     void executar() override;
     void carregarSprite() override;
     void carregarTexto() override;
@@ -17,14 +17,16 @@ public:
     void atualizarTexto() override;
     void atualizarBotao();
     bool Jogou() override;
+    int proximaTela();
 
  
 
 private:
+    int pTela;
     bool jogou;
     Sprite fundo;
     Texto titulo;
-    string nSprite, EndSprite, nTexto, EndTexto,nBotao,EndBotao;
-    BotaoSprite jogar;
+    string nSprite, EndSprite, nTexto, EndTexto, *nBotao, *EndBotao;
+    BotaoSprite *botoes;
 };
 

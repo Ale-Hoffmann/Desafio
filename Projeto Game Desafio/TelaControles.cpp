@@ -98,3 +98,8 @@ bool TelaControles::Jogou()
 		return false;
 	}
 }
+
+int TelaControles::proximaTela()
+{
+	return 0;
+}

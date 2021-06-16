@@ -2,6 +2,13 @@
 
 
 
+TelaMenu::TelaMenu()
+{
+	botoes = new BotaoSprite [3];
+	nBotao = new string [3];
+	EndBotao = new string [3];
+}
+
 void TelaMenu::inicializar()
 {
 	carregarArquivo();
@@ -36,7 +43,7 @@ void TelaMenu::carregarTexto()
 
 void TelaMenu::carregarArquivo()
 {
-
+	int btAtual=0;
 	string dado;
 
 	ifstream lerArq;
@@ -56,9 +63,10 @@ void TelaMenu::carregarArquivo()
 			if (dado == "botao")
 			{
 				lerArq >> dado;
-				nBotao = dado;
+				nBotao[btAtual] = dado;
 				lerArq >> dado;
-				EndBotao = dado;
+				EndBotao[btAtual] = dado;
+				btAtual++;
 			}
 			if (dado == "sprite")
 			{
@@ -74,9 +82,15 @@ void TelaMenu::carregarArquivo()
 
 void TelaMenu::carregarBotao()
 {
-	gRecursos.carregarSpriteSheet(nBotao, EndBotao);
-	jogar.setSpriteSheet(nBotao);
-	jogar.setPos(500,300);
+	for (int i = 0; i < 3; i++)
+	{
+		gRecursos.carregarSpriteSheet(nBotao[i], EndBotao[i]);
+		botoes[i].setSpriteSheet(nBotao[i]);
+	}
+	botoes[0].setPos(500, 250);
+	botoes[1].setPos(500, 350);
+	botoes[2].setPos(500, 450);
+	
 }
 
 void TelaMenu::atualizarSprite()
@@ -92,20 +106,42 @@ void TelaMenu::atualizarTexto()
 
 void TelaMenu::atualizarBotao()
 {
-	jogar.atualizar();
-	jogar.desenhar();
+	for (int i = 0; i < 3; i++)
+	{
+		botoes[i].atualizar();
+		botoes[i].desenhar();
+	}
+	
 }
 
 bool TelaMenu::Jogou()
 {
-	if (jogar.estaClicado())
+	if (botoes[0].estaClicado())
 	{
+		pTela = 2;
 		return true;
+		
+	}
+	if (botoes[1].estaClicado())
+	{
+		pTela = 0;
+		return true;
+		
+	}
+	if (botoes[2].estaClicado())
+	{  
+		pTela = 1;
+		return true;	
 	}
 	else
 	{
 		return false;
 	}
+}
+
+int TelaMenu::proximaTela()
+{
+	return pTela;
 }
 
 

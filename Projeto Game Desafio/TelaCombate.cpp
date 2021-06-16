@@ -117,6 +117,11 @@ bool TelaCombate::Jogou()
 	}
 }
 
+int TelaCombate::proximaTela()
+{
+	return 3;
+}
+
 
 
 void TelaCombate::atualizarSprite()

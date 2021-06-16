@@ -13,6 +13,7 @@ public:
 	void finalizar();
 	void executar();
 	void passaTela();
+	
 
 	
 private:

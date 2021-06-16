@@ -117,10 +117,16 @@
     <ClInclude Include="Arma.h" />
     <ClInclude Include="Bicho.h" />
     <ClInclude Include="Cura.h" />
+    <ClInclude Include="Fila.h" />
     <ClInclude Include="Inimigo.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="Jogo.h" />
+    <ClInclude Include="Lista.h" />
+    <ClInclude Include="Nodo.h" />
+    <ClInclude Include="NodoF.h" />
+    <ClInclude Include="NodoP.h" />
     <ClInclude Include="Personagem.h" />
+    <ClInclude Include="Pilha.h" />
     <ClInclude Include="Tela.h" />
     <ClInclude Include="TelaCombate.h" />
     <ClInclude Include="TelaControles.h" />
