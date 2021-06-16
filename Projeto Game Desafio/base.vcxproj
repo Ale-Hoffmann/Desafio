@@ -110,6 +110,7 @@
     <ClCompile Include="Tela.cpp" />
     <ClCompile Include="TelaCombate.cpp" />
     <ClCompile Include="TelaControles.cpp" />
+    <ClCompile Include="TelaJogar.cpp" />
     <ClCompile Include="TelaMenu.cpp" />
     <ClCompile Include="TelaMorte.cpp" />
   </ItemGroup>
@@ -130,6 +131,7 @@
     <ClInclude Include="Tela.h" />
     <ClInclude Include="TelaCombate.h" />
     <ClInclude Include="TelaControles.h" />
+    <ClInclude Include="TelaJogar.h" />
     <ClInclude Include="TelaMenu.h" />
     <ClInclude Include="TelaMorte.h" />
   </ItemGroup>

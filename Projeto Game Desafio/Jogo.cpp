@@ -6,10 +6,13 @@ Jogo::Jogo()
 	
 	teste[0] = new TelaMenu;
 	teste[1] = new TelaControles;
-	teste[2] = new TelaCombate;
-	teste[3] = new TelaMorte;
-	qTelas = 4;
+	teste[2] = new TelaJogar;
+	teste[3] = new TelaCombate;
+	teste[4] = new TelaMorte;
+	qTelas = 5;
 	telaAtual = 0;
+	Voltar.impilhar(telaAtual);
+
 }
 
 Jogo::~Jogo()
@@ -50,6 +53,11 @@ void Jogo::passaTela()
 	if (teste[telaAtual]->Jogou() == true)
 	{
 		telaAtual = teste[telaAtual]->proximaTela();
+		Voltar.impilhar(telaAtual);
+	}
+	if (gTeclado.pressionou[TECLA_T])
+	{
+		telaAtual = Voltar.desempilhar();
 	}
 	/*if (teste[telaAtual]->Jogou() == true && telaAtual == qTelas-1)
 	{

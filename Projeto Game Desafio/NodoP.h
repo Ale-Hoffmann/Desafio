@@ -2,10 +2,10 @@
 template<class N>
 class NodoP
 {
+public:
 	NodoP();
 	void add(N cont);
 	void addBaixo(NodoP<N>* baixo);
-
 	N getConteudo();
 	NodoP<N>* getBaixo();
 

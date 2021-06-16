@@ -10,9 +10,6 @@
     <ClCompile Include="TelaControles.cpp">
       <Filter>TELAS</Filter>
     </ClCompile>
-    <ClCompile Include="TelaMenu.cpp">
-      <Filter>TELAS</Filter>
-    </ClCompile>
     <ClCompile Include="TelaMorte.cpp">
       <Filter>TELAS</Filter>
     </ClCompile>
@@ -39,6 +36,12 @@
     </ClCompile>
     <ClCompile Include="Jogo.cpp">
       <Filter>BASICO</Filter>
+    </ClCompile>
+    <ClCompile Include="TelaMenu.cpp">
+      <Filter>TELAS</Filter>
+    </ClCompile>
+    <ClCompile Include="TelaJogar.cpp">
+      <Filter>TELAS</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -95,6 +98,9 @@
     </ClInclude>
     <ClInclude Include="Jogo.h">
       <Filter>BASICO</Filter>
+    </ClInclude>
+    <ClInclude Include="TelaJogar.h">
+      <Filter>TELAS</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

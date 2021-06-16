@@ -3,6 +3,8 @@
 #include"TelaMenu.h"
 #include"TelaMorte.h"
 #include"TelaControles.h"
+#include "TelaJogar.h"
+#include "Pilha.h"
 class Jogo
 {
 public:
@@ -17,7 +19,8 @@ public:
 
 	
 private:
-	Tela *teste[4];
+	Pilha<int> Voltar;
+	Tela *teste[5];
 	int qTelas, telaAtual;
 };
 
