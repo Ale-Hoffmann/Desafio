@@ -101,7 +101,11 @@
   <ItemGroup>
     <ClCompile Include="Arma.cpp" />
     <ClCompile Include="Bicho.cpp" />
+    <ClCompile Include="Bruxa.cpp" />
+    <ClCompile Include="Cartola.cpp" />
+    <ClCompile Include="Chapeus.cpp" />
     <ClCompile Include="Cura.cpp" />
+    <ClCompile Include="Formando.cpp" />
     <ClCompile Include="Inimigo.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="Jogo.cpp" />
@@ -113,12 +117,17 @@
     <ClCompile Include="TelaJogar.cpp" />
     <ClCompile Include="TelaMenu.cpp" />
     <ClCompile Include="TelaMorte.cpp" />
+    <ClCompile Include="Zumbi.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arma.h" />
     <ClInclude Include="Bicho.h" />
+    <ClInclude Include="Bruxa.h" />
+    <ClInclude Include="Cartola.h" />
+    <ClInclude Include="Chapeus.h" />
     <ClInclude Include="Cura.h" />
     <ClInclude Include="Fila.h" />
+    <ClInclude Include="Formando.h" />
     <ClInclude Include="Inimigo.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="Jogo.h" />
@@ -134,6 +143,7 @@
     <ClInclude Include="TelaJogar.h" />
     <ClInclude Include="TelaMenu.h" />
     <ClInclude Include="TelaMorte.h" />
+    <ClInclude Include="Zumbi.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

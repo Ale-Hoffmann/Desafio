@@ -43,6 +43,21 @@
     <ClCompile Include="TelaJogar.cpp">
       <Filter>TELAS</Filter>
     </ClCompile>
+    <ClCompile Include="Zumbi.cpp">
+      <Filter>INIMIGOS</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapeus.cpp">
+      <Filter>ITENS\CHAPÉUS</Filter>
+    </ClCompile>
+    <ClCompile Include="Cartola.cpp">
+      <Filter>ITENS\CHAPÉUS</Filter>
+    </ClCompile>
+    <ClCompile Include="Formando.cpp">
+      <Filter>ITENS\CHAPÉUS</Filter>
+    </ClCompile>
+    <ClCompile Include="Bruxa.cpp">
+      <Filter>ITENS\CHAPÉUS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tela.h">
@@ -102,6 +117,21 @@
     <ClInclude Include="TelaJogar.h">
       <Filter>TELAS</Filter>
     </ClInclude>
+    <ClInclude Include="Zumbi.h">
+      <Filter>INIMIGOS</Filter>
+    </ClInclude>
+    <ClInclude Include="Chapeus.h">
+      <Filter>ITENS\CHAPÉUS</Filter>
+    </ClInclude>
+    <ClInclude Include="Cartola.h">
+      <Filter>ITENS\CHAPÉUS</Filter>
+    </ClInclude>
+    <ClInclude Include="Formando.h">
+      <Filter>ITENS\CHAPÉUS</Filter>
+    </ClInclude>
+    <ClInclude Include="Bruxa.h">
+      <Filter>ITENS\CHAPÉUS</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="TELAS">
@@ -118,6 +148,9 @@
     </Filter>
     <Filter Include="BASICO">
       <UniqueIdentifier>{f50478c3-35ad-499c-af00-7702e7e975bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ITENS\CHAPÉUS">
+      <UniqueIdentifier>{b10fd424-015c-4773-a0d3-4ba52268a545}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

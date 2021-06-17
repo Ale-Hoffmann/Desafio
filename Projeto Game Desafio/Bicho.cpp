@@ -2,7 +2,7 @@
 
 Bicho::Bicho()
 {
-	setSprite("imagemInimigo", "../assets/zumbi.png");
+	setSprite("imagemInimigo", "../assets/Fantasma.png");
 	setTipo(1);
 	vid = 1;
 }

@@ -83,7 +83,7 @@ void TelaJogar::carregarBotao()
 	{
 		if (!gRecursos.carregouSpriteSheet(nBotao[i]))
 		{
-			gRecursos.carregarSpriteSheet(nBotao[i], EndBotao[i]);
+			gRecursos.carregarSpriteSheet(nBotao[i], EndBotao[i],1,2);
 		}
 		botoes[i].setSpriteSheet(nBotao[i]);
 	}

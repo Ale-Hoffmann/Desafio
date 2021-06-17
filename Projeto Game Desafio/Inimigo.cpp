@@ -32,6 +32,7 @@ void Inimigo::andar()
 
 		if (ir)
 		{
+
 			distancia++;
 			X++;
 		}
@@ -48,20 +49,24 @@ void Inimigo::andar()
 
 		if (distancia == 0)
 		{
+			
 			ir = true;
 		}
 		if (distancia == Mdistancia)
 		{
+			
 			ir = false;
 		}
 
 		if (ir)
 		{
+			
 			distancia++;
 			Y++;
 		}
 		else
 		{
+			
 			distancia--;
 			Y--;
 		}
@@ -86,7 +91,7 @@ void Inimigo::carregarSprite()
 	{ gRecursos.carregarSpriteSheet(nCorpo, EndCorpo, 1, 2); }
 
 		corpo.setSpriteSheet(nCorpo);
-		corpo.setEscala(0.5, 0.5);
+		corpo.setEscala(0.4, 0.4);
 		corpo.setAnimacao(0);
 	
 }

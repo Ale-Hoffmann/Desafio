@@ -5,13 +5,13 @@ Cura::Cura()
 	setTag("cura");
 	setPreco(15);
 	setValor(25);
-	setImagem("Potion", "../assets/Potion.png");
+	setImagem("Coracao", "../assets/CoracaoU.png");
 }
 
 Cura::Cura(int tm)
 {
 	setTag("cura");
-	setImagem("Potion", "../assets/Potion.png");
+	setImagem("Coracao", "../assets/CoracaoU.png");
 	
 	//setImagem(nome , endereço);
 	switch (tm)

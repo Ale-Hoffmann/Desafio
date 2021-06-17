@@ -3,6 +3,7 @@
 #include"Personagem.h"
 #include"Cura.h"
 #include"Bicho.h"
+#include"Zumbi.h"
 
 class Tela
 {

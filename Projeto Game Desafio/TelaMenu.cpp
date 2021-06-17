@@ -84,8 +84,9 @@ void TelaMenu::carregarBotao()
 {
 	for (int i = 0; i < 3; i++)
 	{
-		gRecursos.carregarSpriteSheet(nBotao[i], EndBotao[i]);
+		gRecursos.carregarSpriteSheet(nBotao[i], EndBotao[i],1,2);
 		botoes[i].setSpriteSheet(nBotao[i]);
+	
 	}
 	botoes[0].setPos(500, 250);
 	botoes[1].setPos(500, 350);
@@ -109,6 +110,7 @@ void TelaMenu::atualizarBotao()
 	for (int i = 0; i < 3; i++)
 	{
 		botoes[i].atualizar();
+		botoes[i].setAnimacaoDoEstadoComMouseEmCima(0);
 		botoes[i].desenhar();
 	}
 	

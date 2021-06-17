@@ -22,7 +22,7 @@ Jogo::~Jogo()
 
 void Jogo::inicializar()
 {
-	uniInicializar(800, 600, false);
+	uniInicializar(1056, 695, false);
 	for (int i = 0; i < qTelas; i++)
 	{
 		teste[i]->inicializar();
@@ -52,26 +52,13 @@ void Jogo::passaTela()
 {
 	if (teste[telaAtual]->Jogou() == true)
 	{
-		telaAtual = teste[telaAtual]->proximaTela();
 		Voltar.impilhar(telaAtual);
+		telaAtual = teste[telaAtual]->proximaTela();
 	}
 	if (gTeclado.pressionou[TECLA_T])
 	{
 		telaAtual = Voltar.desempilhar();
 	}
-	/*if (teste[telaAtual]->Jogou() == true && telaAtual == qTelas-1)
-	{
-		finalizar();
-		
-	}*/
-	/*if (gTeclado.pressionou[TECLA_T]&& telaAtual<qTelas-1)
-	{
-		telaAtual++;
-	}
-	if (gTeclado.pressionou[TECLA_T] && telaAtual == qTelas-1)
-	{
-		telaAtual = 0;
-	}*/
 	teste[telaAtual]->executar();
 }
 

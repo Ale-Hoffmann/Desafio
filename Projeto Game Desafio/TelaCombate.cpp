@@ -2,16 +2,20 @@
 
 TelaCombate::TelaCombate()
 {
-	quantInim = 2;
-	
+	quantInim = 3;
+	spawn[0] = new Bicho;
+	spawn[1] = new Bicho;
+	spawn[2] = new Zumbi;
 	quantItens = 1;
 	itens = new Cura[quantItens];
-	vagabundo = new Bicho[quantInim];
+	
 	Cura a(1);
 	itens[0] = a;
 	itens[0].setXY(100, 100);
-	vagabundo[0].setPosicao(500, 500);
-	vagabundo[1].setPosicao(500, 200);
+	spawn[0]->setPosicao(500, 500);
+	spawn[1]->setPosicao(500, 200);
+	spawn[2]->setPosicao(200, 100);
+
 }
 
 TelaCombate::~TelaCombate()
@@ -30,7 +34,7 @@ void TelaCombate::inicializar()
 	}
 	for (int i = 0; i < quantInim; i++)
 	{
-		vagabundo[i].inicializar();
+		spawn[i]->inicializar();
 	}
 	
 	carregarSprite();
@@ -50,7 +54,7 @@ void TelaCombate::executar()
 	}
 	for (int i = 0; i < quantInim; i++)
 	{
-		vagabundo[i].executar();
+		spawn[i]->executar();
 	}
 	
 }
@@ -59,7 +63,16 @@ void TelaCombate::carregarSprite()
 {
 	gRecursos.carregarSpriteSheet(nSprite, EndSprite);
 	fundo.setSpriteSheet(nSprite);
-	fundo.setEscala(1.2, 1.07);
+	fundo.setEscala(1, 1);
+	
+	if (!gRecursos.carregouSpriteSheet("CoracaoU"))
+	{
+		gRecursos.carregarSpriteSheet("CoracaoU", "../assets/CoracaoU.png", 1, 1);
+	}
+	
+	core.setSpriteSheet("CoracaoU");
+	core.setEscala(0.7, 0.7);
+	core.setAnimacao(0);
 }
 
 void TelaCombate::carregarTexto()
@@ -127,6 +140,7 @@ int TelaCombate::proximaTela()
 void TelaCombate::atualizarSprite()
 {
 	fundo.desenhar(gJanela.getLargura() / 2, gJanela.getAltura() / 2);
+	core.desenhar(122, 30);
 }
 
 void TelaCombate::atualizarTexto()
@@ -151,16 +165,16 @@ void TelaCombate::colisão()
 	for (int i = 0; i < quantInim; i++)
 	{
 		if (uniTestarColisao(principal.getImagem(), principal.getX(), principal.getY(), 0,
-			vagabundo[i].getSprite(), vagabundo[i].getX(), vagabundo[i].getY(), 0))
+			spawn[i]->getSprite(), spawn[i]->getX(), spawn[i]->getY(), 0))
 		{
-			principal.contatoInimigo(vagabundo[i].getX(), vagabundo[i].getY());
+			principal.contatoInimigo(spawn[i]->getX(), spawn[i]->getY());
 
 
 		}
 		if (gTeclado.pressionou[TECLA_ESPACO] && uniTestarColisao(principal.getArma().getImagem(), principal.getArma().getX(), principal.getArma().getY(), 0,
-			vagabundo[i].getSprite(), vagabundo[i].getX(), vagabundo[i].getY(), 0))
+			spawn[i]->getSprite(), spawn[i]->getX(), spawn[i]->getY(), 0))
 		{
-			vagabundo[i].setPosicao(1200, 400);
+			spawn[i]->setPosicao(1200, 400);
 		}
 	}
 }

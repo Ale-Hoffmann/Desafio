@@ -66,7 +66,7 @@ void TelaControles::carregarArquivo()
 
 void TelaControles::carregarBotao()
 {
-	gRecursos.carregarSpriteSheet(nBotao, EndBotao);
+	gRecursos.carregarSpriteSheet(nBotao, EndBotao,1,2);
 	menu.setSpriteSheet(nBotao);
 	menu.setPos(gJanela.getLargura()/2, 550);
 }
@@ -84,6 +84,11 @@ void TelaControles::atualizarTexto()
 void TelaControles::atualizarBotao()
 {
 	menu.atualizar();
+	if (menu.estaComMouseEmCima())
+	{
+		menu.setAnimacaoDoEstadoComMouseEmCima(0);
+	}
+	
 	menu.desenhar();
 }
 

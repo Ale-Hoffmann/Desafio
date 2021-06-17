@@ -19,7 +19,7 @@ void Arma::carregarSprite()
 	gRecursos.carregarSpriteSheet("nArma", "../assets/espada.png");
 	imagem.setSpriteSheet("nArma");
 	
-	imagem.setEscala(2, 2);
+	imagem.setEscala(4,4);
 }
 
 void Arma::executarSprite()

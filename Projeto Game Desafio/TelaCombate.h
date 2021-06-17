@@ -22,8 +22,8 @@ public:
 private:
     int  quantInim, quantItens;
     Texto vida;
-    Sprite fundo;
-    Inimigo* spawn;
+    Sprite fundo,core;
+    Inimigo* spawn[3];
     Cura* itens;
     Personagem principal;
     string nSprite, EndSprite, nTexto, EndTexto;

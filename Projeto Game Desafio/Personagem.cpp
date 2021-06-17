@@ -18,7 +18,7 @@ void Personagem::inicializar()
 {
 	gRecursos.carregarSpriteSheet("Player", "../assets/Player1.png",6,3);
 	player.setSpriteSheet("Player");
-	player.setEscala(0.5, 0.5);
+	player.setEscala(1, 1);
 	player.setAnimacao(0);
 	xPer = gJanela.getLargura() / 2;
 	yPer = gJanela.getAltura() / 2;
@@ -159,19 +159,19 @@ string Personagem::getTxtVida()
 	{
 	case 1:
 	
-		vd = "Vida : 1";
+		vd = " 1x";
 		break;
 	case 2:
 	
-		vd = "Vida : 2";
+		vd = " 2x";
 		break;
 	case 3:
 
-		vd = "Vida : 3";
+		vd = " 3x";
 		break;
 	case 4:
 
-		vd = "Vida : 4";
+		vd = " 4x";
 		break;
 	default:
 		break;
