@@ -12,6 +12,7 @@ public:
 	void removerFinal();
 	void esvaziarLista();
 
+	L  getEspecifico(int a);
 	L  pegarUltimo();
 	L  getUltimo();
 	L  getPrimeiro();
@@ -20,6 +21,7 @@ public:
 	bool NaoEstaVazio();
 
 private:
+	L  getEspecifico(int a,Nodo<L> *b);
 	Nodo<L>* fim, * inicio, * corredor;
 	int tamanho;
 };
@@ -140,6 +142,12 @@ inline void Lista<L>::esvaziarLista()
 }
 
 template<class L>
+inline L Lista<L>::getEspecifico(int a)
+{
+	return getEspecifico(a, inicio);
+}
+
+template<class L>
 inline L Lista<L>::pegarUltimo()
 {
 	L aux;
@@ -210,4 +218,19 @@ template<class L>
 inline bool Lista<L>::NaoEstaVazio()
 {
 	return tamanho;
+}
+
+template<class L>
+inline L Lista<L>::getEspecifico(int a, Nodo<L> *b)
+{
+	if (a == 0)
+	{
+		return b->getConteudo();
+	}
+	else
+	{
+		a--;
+		return getEspecifico(a, b->getProximo());
+	}
+	
 }

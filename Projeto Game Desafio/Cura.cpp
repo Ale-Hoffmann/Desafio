@@ -4,7 +4,7 @@ Cura::Cura()
 {
 	setTag("cura");
 	setPreco(15);
-	setValor(25);
+	setValor(21);
 	setImagem("Coracao", "../assets/CoracaoU.png");
 }
 

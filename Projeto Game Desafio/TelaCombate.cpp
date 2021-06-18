@@ -3,18 +3,90 @@
 TelaCombate::TelaCombate()
 {
 	quantInim = 3;
-	spawn[0] = new Bicho;
-	spawn[1] = new Bicho;
-	spawn[2] = new Zumbi;
-	quantItens = 1;
-	itens = new Cura[quantItens];
+
+	spawn.adicionarNoInicio(new Bicho);
+	spawn.adicionarNoInicio(new Bicho);
+	spawn.adicionarNoInicio(new Zumbi);
 	
-	Cura a(1);
-	itens[0] = a;
-	itens[0].setXY(100, 100);
-	spawn[0]->setPosicao(500, 500);
-	spawn[1]->setPosicao(500, 200);
-	spawn[2]->setPosicao(200, 100);
+	spawn.getEspecifico(0)->setPosicao(500, 500);
+	spawn.getEspecifico(1)->setPosicao(500, 200);
+	spawn.getEspecifico(2)->setPosicao(500, 100);
+
+	
+	quantItens = 1;
+
+	itens.adicionarNoInicio(new Cura(1));
+
+	itens.getEspecifico(0)->setXY(100, 100);
+	
+
+}
+
+TelaCombate::TelaCombate(int tp)
+{
+	switch (tp)
+	{
+	case 1:
+		quantInim = 1;
+		spawn.adicionarNoInicio(new Zumbi);
+		spawn.getEspecifico(0)->setPosicao(500, 500);
+
+		quantItens = 1;
+		itens.adicionarNoInicio(new Cura(1));
+		itens.getEspecifico(0)->setXY(100, 100);
+
+		break;
+	case 2:
+		quantInim = 2;
+		spawn.adicionarNoInicio(new Bicho);
+		spawn.adicionarNoInicio(new Zumbi);
+
+		spawn.getEspecifico(0)->setPosicao(500, 500);
+		spawn.getEspecifico(1)->setPosicao(500, 200);
+
+		quantItens = 1;
+		itens.adicionarNoInicio(new Cura(1));
+		itens.getEspecifico(0)->setXY(100, 100);
+
+		break;
+	case 3:
+		quantInim = 3;
+
+		spawn.adicionarNoInicio(new Bicho);
+		spawn.adicionarNoInicio(new Bicho);
+		spawn.adicionarNoInicio(new Zumbi);
+
+		spawn.getEspecifico(0)->setPosicao(500, 500);
+		spawn.getEspecifico(1)->setPosicao(500, 200);
+		spawn.getEspecifico(2)->setPosicao(500, 100);
+
+
+		quantItens = 1;
+
+		itens.adicionarNoInicio(new Cura(1));
+
+		itens.getEspecifico(0)->setXY(100, 100);
+
+
+		break;
+	case 4:
+
+		break;
+
+
+	default:
+		break;
+	}
+
+
+
+
+
+
+
+
+
+
 
 }
 
@@ -30,11 +102,11 @@ void TelaCombate::inicializar()
 
 	for (int i = 0; i < quantItens; i++)
 	{
-		itens[i].carregar();
+		itens.getEspecifico(i)->carregar();
 	}
 	for (int i = 0; i < quantInim; i++)
 	{
-		spawn[i]->inicializar();
+		spawn.getEspecifico(i)->inicializar();
 	}
 	
 	carregarSprite();
@@ -50,11 +122,11 @@ void TelaCombate::executar()
 	colisão();
 	for (int i = 0; i < quantItens; i++)
 	{
-		itens[i].executar();
+		itens.getEspecifico(i)->executar();
 	}
 	for (int i = 0; i < quantInim; i++)
 	{
-		spawn[i]->executar();
+		spawn.getEspecifico(i)->executar();
 	}
 	
 }
@@ -155,26 +227,26 @@ void TelaCombate::colisão()
 	for (int i = 0; i < quantItens; i++)
 	{
 		if (uniTestarColisao(principal.getImagem(), principal.getX(), principal.getY(), 0,
-			itens[i].getImagem(), itens[i].getX(), itens[i].getY(), 0))
+			itens.getEspecifico(i)->getImagem(), itens.getEspecifico(i)->getX(), itens.getEspecifico(i)->getY(), 0))
 		{
-			principal.contato(itens[i].getTag(), itens[i].getValor());
+			principal.contato(itens.getEspecifico(i)->getTag(), itens.getEspecifico(i)->getValor());
 
-			itens[i].setXY(1200, 400);
+			itens.getEspecifico(i)->setXY(1200, 400);
 		}
 	}
 	for (int i = 0; i < quantInim; i++)
 	{
 		if (uniTestarColisao(principal.getImagem(), principal.getX(), principal.getY(), 0,
-			spawn[i]->getSprite(), spawn[i]->getX(), spawn[i]->getY(), 0))
+			spawn.getEspecifico(i)->getSprite(), spawn.getEspecifico(i)->getX(), spawn.getEspecifico(i)->getY(), 0))
 		{
-			principal.contatoInimigo(spawn[i]->getX(), spawn[i]->getY());
+			principal.contatoInimigo(spawn.getEspecifico(i)->getX(), spawn.getEspecifico(i)->getY());
 
 
 		}
 		if (gTeclado.pressionou[TECLA_ESPACO] && uniTestarColisao(principal.getArma().getImagem(), principal.getArma().getX(), principal.getArma().getY(), 0,
-			spawn[i]->getSprite(), spawn[i]->getX(), spawn[i]->getY(), 0))
+			spawn.getEspecifico(i)->getSprite(), spawn.getEspecifico(i)->getX(), spawn.getEspecifico(i)->getY(), 0))
 		{
-			spawn[i]->setPosicao(1200, 400);
+			spawn.getEspecifico(i)->setPosicao(1200, 400);
 		}
 	}
 }
