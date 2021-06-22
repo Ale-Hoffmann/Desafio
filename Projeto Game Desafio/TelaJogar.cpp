@@ -29,7 +29,7 @@ void TelaJogar::carregarSprite()
 		gRecursos.carregarSpriteSheet(nSprite, EndSprite);
 	}
 	fundo.setSpriteSheet(nSprite);
-	fundo.setEscala(1.2, 1.5);
+	fundo.setEscala(1, 1);
 }
 
 void TelaJogar::carregarTexto()
@@ -83,11 +83,12 @@ void TelaJogar::carregarBotao()
 	{
 		if (!gRecursos.carregouSpriteSheet(nBotao[i]))
 		{
-			gRecursos.carregarSpriteSheet(nBotao[i], EndBotao[i],1,2);
+			gRecursos.carregarSpriteSheet(nBotao[i], EndBotao[i],2,1);
+			botoes[i].getSprite()->setEscala(0.3, 0.3);
 		}
 		botoes[i].setSpriteSheet(nBotao[i]);
 	}
-
+	botoes[0].getSprite()->setEscala(0.3, 0.3);
 	botoes[0].setPos(500, 250);
 	botoes[1].setPos(500, 350);
 	botoes[2].setPos(500, 450);

@@ -2,12 +2,15 @@
 
 void Chapeus::inicializar()
 {
+	atirando = false;
 	carregarSprite();
+	a->inicializar();
 }
 
 void Chapeus::executar()
 {
 	atualizarSprite();
+	atirar();
 }
 
 void Chapeus::setAncora(int x, int y)
@@ -15,6 +18,38 @@ void Chapeus::setAncora(int x, int y)
 	X = x;
 	Y = y;
 }
+
+void Chapeus::setBala(int tp)
+{
+	a = new Bala(tp);
+}
+
+void Chapeus::tiro()
+{
+	a->executar();
+}
+
+void Chapeus::atirar()
+{
+	if (gTeclado.pressionou[TECLA_F] && atirando == false)
+	{
+		atirando = true;
+		tiro();
+	}
+	else
+	{
+		a->setPos(X, Y);
+		a->setDirecao(3);
+	}
+
+}
+
+Bala Chapeus::getBala()
+{
+	return *a;
+}
+
+
 
 void Chapeus::setSprite(string n, string end)
 {
@@ -29,17 +64,13 @@ void Chapeus::carregarSprite()
 		gRecursos.carregarSpriteSheet(nCorpo, endCorpo);
 	}
 	corpo.setSpriteSheet(nCorpo);
-	corpo.setEscala(1, 1);
+	corpo.setEscala(0.2, 0.2);
 
 }
 
 void Chapeus::atualizarSprite()
 {
-	corpo.desenhar(X, Y);
+	corpo.desenhar(X-50, Y-50);
 }
 
-void Chapeus::setArma(Arma *atual)
-{
-	a = new Arma;
-	a = atual;
-}
+

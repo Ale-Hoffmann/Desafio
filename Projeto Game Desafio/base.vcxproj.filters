@@ -58,6 +58,18 @@
     <ClCompile Include="Bruxa.cpp">
       <Filter>ITENS\CHAPÉUS</Filter>
     </ClCompile>
+    <ClCompile Include="Usuario.cpp">
+      <Filter>BASICO</Filter>
+    </ClCompile>
+    <ClCompile Include="Save.cpp">
+      <Filter>BASICO</Filter>
+    </ClCompile>
+    <ClCompile Include="GerenciadorDeArquivo.cpp">
+      <Filter>BASICO</Filter>
+    </ClCompile>
+    <ClCompile Include="Bala.cpp">
+      <Filter>ITENS\CHAPÉUS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tela.h">
@@ -130,6 +142,18 @@
       <Filter>ITENS\CHAPÉUS</Filter>
     </ClInclude>
     <ClInclude Include="Bruxa.h">
+      <Filter>ITENS\CHAPÉUS</Filter>
+    </ClInclude>
+    <ClInclude Include="Usuario.h">
+      <Filter>BASICO</Filter>
+    </ClInclude>
+    <ClInclude Include="Save.h">
+      <Filter>BASICO</Filter>
+    </ClInclude>
+    <ClInclude Include="GerenciadorDeArquivo.h">
+      <Filter>BASICO</Filter>
+    </ClInclude>
+    <ClInclude Include="Bala.h">
       <Filter>ITENS\CHAPÉUS</Filter>
     </ClInclude>
   </ItemGroup>

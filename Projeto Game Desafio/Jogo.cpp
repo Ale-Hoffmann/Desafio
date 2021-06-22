@@ -7,7 +7,7 @@ Jogo::Jogo()
 	teste[0] = new TelaMenu;
 	teste[1] = new TelaControles;
 	teste[2] = new TelaJogar;
-	teste[3] = new TelaCombate;
+	teste[3] = new TelaCombate(1);
 	teste[4] = new TelaMorte;
 	qTelas = 5;
 	telaAtual = 0;

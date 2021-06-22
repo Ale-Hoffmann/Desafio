@@ -6,6 +6,6 @@ class Bruxa :
 public:
     Bruxa();
 private:
-    Arma* atual;
+    
 };
 

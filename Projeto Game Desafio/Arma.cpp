@@ -16,15 +16,14 @@ void Arma::executar()
 
 void Arma::carregarSprite()
 {
-	gRecursos.carregarSpriteSheet("nArma", "../assets/espada.png");
+	gRecursos.carregarSpriteSheet("nArma", "../assets/espada.png",4,1);
 	imagem.setSpriteSheet("nArma");
 	
-	imagem.setEscala(4,4);
+	imagem.setEscala(0.15,0.15);
 }
 
 void Arma::executarSprite()
 {
-	
 	imagem.desenhar(X, Y);
 }
 

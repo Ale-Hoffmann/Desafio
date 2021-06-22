@@ -100,27 +100,32 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Arma.cpp" />
+    <ClCompile Include="Bala.cpp" />
     <ClCompile Include="Bicho.cpp" />
     <ClCompile Include="Bruxa.cpp" />
     <ClCompile Include="Cartola.cpp" />
     <ClCompile Include="Chapeus.cpp" />
     <ClCompile Include="Cura.cpp" />
     <ClCompile Include="Formando.cpp" />
+    <ClCompile Include="GerenciadorDeArquivo.cpp" />
     <ClCompile Include="Inimigo.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="Jogo.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Personagem.cpp" />
+    <ClCompile Include="Save.cpp" />
     <ClCompile Include="Tela.cpp" />
     <ClCompile Include="TelaCombate.cpp" />
     <ClCompile Include="TelaControles.cpp" />
     <ClCompile Include="TelaJogar.cpp" />
     <ClCompile Include="TelaMenu.cpp" />
     <ClCompile Include="TelaMorte.cpp" />
+    <ClCompile Include="Usuario.cpp" />
     <ClCompile Include="Zumbi.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arma.h" />
+    <ClInclude Include="Bala.h" />
     <ClInclude Include="Bicho.h" />
     <ClInclude Include="Bruxa.h" />
     <ClInclude Include="Cartola.h" />
@@ -128,6 +133,7 @@
     <ClInclude Include="Cura.h" />
     <ClInclude Include="Fila.h" />
     <ClInclude Include="Formando.h" />
+    <ClInclude Include="GerenciadorDeArquivo.h" />
     <ClInclude Include="Inimigo.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="Jogo.h" />
@@ -137,12 +143,14 @@
     <ClInclude Include="NodoP.h" />
     <ClInclude Include="Personagem.h" />
     <ClInclude Include="Pilha.h" />
+    <ClInclude Include="Save.h" />
     <ClInclude Include="Tela.h" />
     <ClInclude Include="TelaCombate.h" />
     <ClInclude Include="TelaControles.h" />
     <ClInclude Include="TelaJogar.h" />
     <ClInclude Include="TelaMenu.h" />
     <ClInclude Include="TelaMorte.h" />
+    <ClInclude Include="Usuario.h" />
     <ClInclude Include="Zumbi.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

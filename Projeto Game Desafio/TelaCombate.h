@@ -24,12 +24,13 @@ public:
     void colisão();
 private:
     int  quantInim, quantItens;
-    Texto vida;
+    Texto vida, dinheiro;
     Sprite fundo,core;
     Lista<Inimigo*> spawn;
     Lista<Cura*> itens;
     Personagem principal;
     string nSprite, EndSprite, nTexto, EndTexto;
     Bicho *vagabundo;
+    bool acabou;
 };
 
