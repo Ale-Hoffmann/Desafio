@@ -1,5 +1,4 @@
 #pragma once
-#include"Portal.h"
 #include "Tela.h"
 #include "Lista.h"
 class TelaCombate :
@@ -9,12 +8,6 @@ public:
     TelaCombate();
     TelaCombate(int tp);
     ~TelaCombate();
-
-    bool operator<( TelaCombate a);
-    bool operator>( TelaCombate b);
-    bool operator==( TelaCombate c);
-
-  
     void inicializar() override;
     void executar() override;
 
@@ -23,24 +16,22 @@ public:
     void carregarArquivo() override;
     bool Jogou() override;
     int proximaTela();
-    
-    void faseTerminou();
 
     void atualizarSprite() override;
     void atualizarTexto() override;
-
-    bool NovoJogo();
-    int qualSave();
-
-    int getTipo();
+   
+  
     void colis�o();
-
 private:
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     bool inimigosVivos();
 
     int  quantInim, quantItens, pTela, tipo,quantPortas;
+=======
+    int  quantInim, quantItens;
+>>>>>>> parent of 011bbc3 (arvore implementando)
     Texto vida, dinheiro;
 =======
     int  quantInim, quantItens;
@@ -54,8 +45,11 @@ private:
     Bicho *vagabundo;
 <<<<<<< HEAD
     bool acabou;
+<<<<<<< HEAD
     Lista<Portal*> portas;
 =======
 >>>>>>> parent of d7dc273 (chapéus implementados e saves também)
+=======
+>>>>>>> parent of 011bbc3 (arvore implementando)
 };
 

@@ -16,11 +16,7 @@ void TelaControles::executar()
 
 void TelaControles::carregarSprite()
 {
-	if (!gRecursos.carregouSpriteSheet(nSprite))
-	{
-gRecursos.carregarSpriteSheet(nSprite, EndSprite);
-	}
-	
+	gRecursos.carregarSpriteSheet(nSprite, EndSprite);
 	fundo.setSpriteSheet(nSprite);
 	fundo.setEscala(1, 1);
 }
@@ -94,16 +90,6 @@ void TelaControles::atualizarBotao()
 	}
 	
 	menu.desenhar();
-}
-
-bool TelaControles::NovoJogo()
-{
-	return false;
-}
-
-int TelaControles::qualSave()
-{
-	return 0;
 }
 
 bool TelaControles::Jogou()

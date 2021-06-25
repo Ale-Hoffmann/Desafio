@@ -2,8 +2,6 @@
 
 Arma::Arma()
 {
-	dir = 0;
-	dano = 1;
 }
 
 void Arma::inicializar()
@@ -19,10 +17,15 @@ void Arma::executar()
 void Arma::carregarSprite()
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
      gRecursos.carregarSpriteSheet("nArma", "../assets/espada.png",4,1);
 	
+=======
+	gRecursos.carregarSpriteSheet("nArma", "../assets/espada.png",4,1);
+>>>>>>> parent of 011bbc3 (arvore implementando)
 	imagem.setSpriteSheet("nArma");
+	
 	imagem.setEscala(0.15,0.15);
 =======
 	gRecursos.carregarSpriteSheet("nArma", "../assets/espada.png");
@@ -36,23 +39,12 @@ void Arma::executarSprite()
 {
 	
 	imagem.desenhar(X, Y);
-	imagem.setAnimacao(dir);
 }
 
 void Arma::setarPosicao(int x, int y)
 {
 	X = x;
 	Y = y;
-}
-
-void Arma::setDirecao(int a)
-{
-	dir = a;
-}
-
-int Arma::getDano()
-{
-	return dano;
 }
 
 int Arma::getX()

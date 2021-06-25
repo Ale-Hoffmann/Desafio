@@ -71,6 +71,7 @@
     <ClCompile Include="Bala.cpp">
       <Filter>ITENS\CHAPÉUS</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="Portal.cpp">
       <Filter>ITENS</Filter>
     </ClCompile>
@@ -79,6 +80,8 @@
     </ClCompile>
 =======
 >>>>>>> parent of d7dc273 (chapéus implementados e saves também)
+=======
+>>>>>>> parent of 011bbc3 (arvore implementando)
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tela.h">
@@ -166,6 +169,7 @@
     <ClInclude Include="Bala.h">
       <Filter>ITENS\CHAPÉUS</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="Portal.h">
       <Filter>ITENS</Filter>
     </ClInclude>
@@ -180,6 +184,8 @@
     </ClInclude>
 =======
 >>>>>>> parent of d7dc273 (chapéus implementados e saves também)
+=======
+>>>>>>> parent of 011bbc3 (arvore implementando)
   </ItemGroup>
   <ItemGroup>
     <Filter Include="TELAS">

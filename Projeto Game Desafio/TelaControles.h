@@ -15,9 +15,6 @@ class TelaControles :
 	void atualizarTexto()override;
 	void atualizarBotao();
 
-	bool NovoJogo();
-	int qualSave();
-
 	bool Jogou();
 	int proximaTela();
 

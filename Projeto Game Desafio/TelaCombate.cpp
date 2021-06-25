@@ -2,10 +2,6 @@
 
 TelaCombate::TelaCombate()
 {
-	acabou = false;
-	quantPortas = 2;
-	portas.adicionarNoInicio(new Portal(1));
-	portas.adicionarNoInicio(new Portal(2));
 	quantInim = 3;
 
 	spawn.adicionarNoInicio(new Bicho);
@@ -28,15 +24,9 @@ TelaCombate::TelaCombate()
 
 TelaCombate::TelaCombate(int tp)
 {
-	tipo = tp;
-	switch (tipo)
+	switch (tp)
 	{
-	case 10:
-		acabou = false;
-		quantPortas = 2;
-		portas.adicionarNoInicio(new Portal(1));
-		portas.adicionarNoInicio(new Portal(2));
-
+	case 1:
 		quantInim = 1;
 		spawn.adicionarNoInicio(new Zumbi);
 		spawn.getEspecifico(0)->setPosicao(500, 500);
@@ -46,12 +36,7 @@ TelaCombate::TelaCombate(int tp)
 		itens.getEspecifico(0)->setXY(100, 100);
 
 		break;
-	case 15:
-		acabou = false;
-		quantPortas = 2;
-		portas.adicionarNoInicio(new Portal(1));
-		portas.adicionarNoInicio(new Portal(2));
-
+	case 2:
 		quantInim = 2;
 		spawn.adicionarNoInicio(new Bicho);
 		spawn.adicionarNoInicio(new Zumbi);
@@ -64,10 +49,7 @@ TelaCombate::TelaCombate(int tp)
 		itens.getEspecifico(0)->setXY(100, 100);
 
 		break;
-	case 20:
-		acabou = false;
-		
-
+	case 3:
 		quantInim = 3;
 
 		spawn.adicionarNoInicio(new Bicho);
@@ -87,7 +69,7 @@ TelaCombate::TelaCombate(int tp)
 
 
 		break;
-	case 5:
+	case 4:
 
 		break;
 
@@ -98,38 +80,25 @@ TelaCombate::TelaCombate(int tp)
 
 
 
+
+
+
+
+
+
+
+
 }
 
 TelaCombate::~TelaCombate()
 {
 }
 
-bool TelaCombate::operator<(TelaCombate a)
-{
-	return this->tipo < a.getTipo();
-}
-
-bool TelaCombate::operator>(TelaCombate b)
-{
-	return this->tipo > b.getTipo();
-}
-
-bool TelaCombate::operator==( TelaCombate c)
-{
-	return this->tipo == c.getTipo();
-}
-
-
-
 void TelaCombate::inicializar()
 {
 	
 	carregarArquivo();
 	principal.inicializar();
-	for (int p = 0; p < quantPortas; p++)
-	{
-		portas.getEspecifico(p)->inicializar();
-	}
 
 	for (int i = 0; i < quantItens; i++)
 	{
@@ -149,7 +118,6 @@ void TelaCombate::executar()
 	
 	atualizarSprite();
 	atualizarTexto();
-	faseTerminou();
 	principal.executar();
 	colisão();
 	for (int i = 0; i < quantItens; i++)
@@ -165,10 +133,7 @@ void TelaCombate::executar()
 
 void TelaCombate::carregarSprite()
 {
-	if (!gRecursos.carregouSpriteSheet("nSprite"))
-	{
-		gRecursos.carregarSpriteSheet(nSprite, EndSprite);
-	}
+	gRecursos.carregarSpriteSheet(nSprite, EndSprite);
 	fundo.setSpriteSheet(nSprite);
 	fundo.setEscala(1, 1);
 	
@@ -180,16 +145,11 @@ void TelaCombate::carregarSprite()
 	core.setSpriteSheet("CoracaoU");
 	core.setEscala(0.7, 0.7);
 	core.setAnimacao(0);
-
 }
 
 void TelaCombate::carregarTexto()
 {
-
-	if (!gRecursos.carregouFonte(nTexto))
-	{
-      gRecursos.carregarFonte(nTexto, EndTexto);
-	}
+	gRecursos.carregarFonte(nTexto, EndTexto);
 	vida.setFonte(nTexto);
 	vida.setAlinhamento(TEXTO_CENTRALIZADO);
 	vida.setEscala(1.5, 1.5);
@@ -233,14 +193,9 @@ bool TelaCombate::Jogou()
 {
 	if (principal.getVivo() == false)
 	{
-		pTela = 4;
 		return true;
 	}
-	if (acabou == true)
-	{
-		acabou = false;
-		return true;
-	}
+    
 	else
 	{
 		return false;
@@ -249,18 +204,7 @@ bool TelaCombate::Jogou()
 
 int TelaCombate::proximaTela()
 {
-	return pTela;
-}
-
-void TelaCombate::faseTerminou()
-{
-	if (inimigosVivos()==false)
-	{
-		for (int p = 0; p < quantPortas; p++)
-		{
-			portas.getEspecifico(p)->executar();
-		}
-	}
+	return 3;
 }
 
 
@@ -277,21 +221,6 @@ void TelaCombate::atualizarTexto()
 	vida.desenhar(110, 30);
 }
 
-bool TelaCombate::NovoJogo()
-{
-	return false;
-}
-
-int TelaCombate::qualSave()
-{
-	return 0;
-}
-
-
-int TelaCombate::getTipo()
-{
-	return tipo;
-}
 
 void TelaCombate::colisão()
 {
@@ -317,43 +246,7 @@ void TelaCombate::colisão()
 		if (gTeclado.pressionou[TECLA_ESPACO] && uniTestarColisao(principal.getArma().getImagem(), principal.getArma().getX(), principal.getArma().getY(), 0,
 			spawn.getEspecifico(i)->getSprite(), spawn.getEspecifico(i)->getX(), spawn.getEspecifico(i)->getY(), 0))
 		{
- 			spawn.getEspecifico(i)->tomarDano(principal.getArma().getDano());
-			if (spawn.getEspecifico(i)->vivo() == false)
-			{
-				spawn.getEspecifico(i)->setPosicao(1200, 400);
-			}
-		}
-
-	}
-    for (int p = 0; p < quantPortas; p++)
-	{
-		if (uniTestarColisao(principal.getImagem(), principal.getX(), principal.getY(), 0,
-			portas.getEspecifico(p)->getSprite(), portas.getEspecifico(p)->getX(), portas.getEspecifico(p)->getY(), 0) && inimigosVivos()==false)
-		{
-			if (portas.getEspecifico(p)->getTipo() == 1)
-			{
-				acabou = true;
-				pTela = 10;
-			}
-			if (portas.getEspecifico(p)->getTipo() == 2)
-			{
-				acabou = true;
-				pTela = 5;
-			}
-		}
-
-	}
-}
-
-bool TelaCombate::inimigosVivos()
-{
-	bool aux;
-	for (int i = 0; i < quantInim; i++)
-	{
-		if(spawn.getEspecifico(i)->vivo()==true)
-		{
-			return true;
+			spawn.getEspecifico(i)->setPosicao(1200, 400);
 		}
 	}
-	return false;
 }

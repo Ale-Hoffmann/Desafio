@@ -88,7 +88,7 @@ void Inimigo::setSprite(string a, string b)
 void Inimigo::carregarSprite()
 {
 	if (!gRecursos.carregouSpriteSheet(nCorpo))
-	{ gRecursos.carregarSpriteSheet(nCorpo, EndCorpo); }
+	{ gRecursos.carregarSpriteSheet(nCorpo, EndCorpo, 1, 2); }
 
 		corpo.setSpriteSheet(nCorpo);
 		corpo.setEscala(0.4, 0.4);
@@ -114,11 +114,6 @@ void Inimigo::setTarget(int x, int y)
 	Ytarget = y;
 }
 
-void Inimigo::setVida(int v)
-{
-	vida = v;
-}
-
 void Inimigo::setTipo(int t)
 {
 	tipo = t;
@@ -127,20 +122,6 @@ void Inimigo::setTipo(int t)
 void Inimigo::setDano(int d)
 {
 	dano = d;
-}
-
-void Inimigo::tomarDano(int d)
-{
-	vida = vida - d;
-	if (vida < 0)
-	{
-		vida = 0;
-	}
-}
-
-bool Inimigo::vivo()
-{
-	return vida;
 }
 
 int Inimigo::getDano()

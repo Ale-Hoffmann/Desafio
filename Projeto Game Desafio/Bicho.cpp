@@ -4,7 +4,22 @@ Bicho::Bicho()
 {
 	setSprite("imagemInimigo", "../assets/Fantasma.png");
 	setTipo(1);
-	setVida(2);
+	vid = 1;
 }
 
+void Bicho::morrer()
+{
+	vid = 0;
+}
 
+bool Bicho::getVivo()
+{
+	if (vid == 0)
+	{
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}

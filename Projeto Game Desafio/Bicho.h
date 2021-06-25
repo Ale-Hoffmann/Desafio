@@ -6,9 +6,10 @@ class Bicho :
 {
 public:
     Bicho();
-  
+    void morrer();
+    bool getVivo();
 
 private:
-   
+    int vid;
 };
 

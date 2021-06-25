@@ -45,7 +45,7 @@ void GerenciadorDeArquivo::setSaveAtual(int at)
 	saveAtual = at;
 }
 
-void GerenciadorDeArquivo::escreverNoSave( string nmUsuario, int nFase, int moedas, int vida, int quantChap)
+void GerenciadorDeArquivo::escreverNoSave(int tp, string nmUsuario, int nFase, int moedas, int vida, int quantChap)
 {
 	gerenciador->setSave(nmUsuario, nFase, moedas, vida, quantChap);
 	string nmArq;
