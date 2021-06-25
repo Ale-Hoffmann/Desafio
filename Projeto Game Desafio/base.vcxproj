@@ -111,14 +111,8 @@
     <ClCompile Include="Jogo.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Personagem.cpp" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <ClCompile Include="Portal.cpp" />
-=======
->>>>>>> parent of 011bbc3 (arvore implementando)
-    <ClCompile Include="Save.cpp" />
-=======
->>>>>>> parent of d7dc273 (chapéus implementados e saves também)
+
+   
     <ClCompile Include="Tela.cpp" />
     <ClCompile Include="TelaCombate.cpp" />
     <ClCompile Include="TelaControles.cpp" />
@@ -129,15 +123,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arma.h" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <ClInclude Include="Arvore.h" />
-=======
->>>>>>> parent of 011bbc3 (arvore implementando)
+
     <ClInclude Include="Bala.h" />
-=======
->>>>>>> parent of d7dc273 (chapéus implementados e saves também)
-    <ClInclude Include="Bicho.h" />
+ <ClInclude Include="Bicho.h" />
     <ClInclude Include="Bruxa.h" />
     <ClInclude Include="Cartola.h" />
     <ClInclude Include="Chapeus.h" />
@@ -153,15 +141,8 @@
     <ClInclude Include="NodoP.h" />
     <ClInclude Include="Personagem.h" />
     <ClInclude Include="Pilha.h" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <ClInclude Include="Portal.h" />
-=======
->>>>>>> parent of 011bbc3 (arvore implementando)
-    <ClInclude Include="Save.h" />
-=======
->>>>>>> parent of d7dc273 (chapéus implementados e saves também)
-    <ClInclude Include="Tela.h" />
+<ClInclude Include="Save.h" />
+  <ClInclude Include="Tela.h" />
     <ClInclude Include="TelaCombate.h" />
     <ClInclude Include="TelaControles.h" />
     <ClInclude Include="TelaJogar.h" />
