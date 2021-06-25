@@ -70,6 +70,12 @@
     <ClCompile Include="Bala.cpp">
       <Filter>ITENS\CHAPÉUS</Filter>
     </ClCompile>
+    <ClCompile Include="Portal.cpp">
+      <Filter>ITENS</Filter>
+    </ClCompile>
+    <ClCompile Include="TelaCreditos.cpp">
+      <Filter>TELAS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tela.h">
@@ -155,6 +161,18 @@
     </ClInclude>
     <ClInclude Include="Bala.h">
       <Filter>ITENS\CHAPÉUS</Filter>
+    </ClInclude>
+    <ClInclude Include="Portal.h">
+      <Filter>ITENS</Filter>
+    </ClInclude>
+    <ClInclude Include="Arvore.h">
+      <Filter>MATÉRIAS</Filter>
+    </ClInclude>
+    <ClInclude Include="NodoA.h">
+      <Filter>MATÉRIAS</Filter>
+    </ClInclude>
+    <ClInclude Include="TelaCreditos.h">
+      <Filter>TELAS</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

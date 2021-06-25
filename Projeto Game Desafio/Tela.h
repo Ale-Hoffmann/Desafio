@@ -20,7 +20,8 @@ public:
 
 	virtual bool Jogou()=0;
 	virtual int proximaTela()=0;
-	
+	virtual bool NovoJogo() = 0;
+	virtual int qualSave() = 0;
 
 private:
 	

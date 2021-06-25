@@ -16,6 +16,8 @@ public:
     void atualizarSprite() override;
     void atualizarTexto() override;
     void atualizarBotao();
+    bool NovoJogo();
+    int qualSave();
     bool Jogou() override;
     int proximaTela();
 

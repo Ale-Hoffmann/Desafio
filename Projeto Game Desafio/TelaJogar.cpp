@@ -113,6 +113,16 @@ void TelaJogar::atualizarBotao()
 	}
 }
 
+bool TelaJogar::NovoJogo()
+{
+	return false;
+}
+
+int TelaJogar::qualSave()
+{
+	return 0;
+}
+
 bool TelaJogar::Jogou()
 {
 	if (botoes[0].estaClicado())

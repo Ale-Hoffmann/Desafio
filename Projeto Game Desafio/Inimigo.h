@@ -11,9 +11,12 @@ public:
 	void executarSprite();
 	void setPosicao(int x, int y);
 	void setTarget(int x, int y);
+	void setVida(int v);
 	void setTipo(int t);
 	void setDano(int d);
+	void tomarDano(int d);
 
+	bool vivo();
 	int getDano();
 	int getX();
 	int getY();

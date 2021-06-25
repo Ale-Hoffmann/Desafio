@@ -6,7 +6,10 @@ Item::Item()
 
 void Item::carregar()
 {
-	gRecursos.carregarSpriteSheet(nomeImagem, endImagem,1,1);
+	if (!gRecursos.carregouSpriteSheet(nomeImagem))
+	{
+     gRecursos.carregarSpriteSheet(nomeImagem, endImagem,1,1);
+	}	
 	imagem.setSpriteSheet(nomeImagem);
 	imagem.setEscala(0.5,0.5);
 	imagem.setAnimacao(0);

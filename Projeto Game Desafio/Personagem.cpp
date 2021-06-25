@@ -18,10 +18,14 @@ Personagem::Personagem(int x, int y, int v, int e)
 }
 
 void Personagem::inicializar()
-{
+    {
+	if (!gRecursos.carregouSpriteSheet("Player"))
+	{
 	gRecursos.carregarSpriteSheet("Player", "../assets/Player1.png",6,3);
+	}
+	
 	player.setSpriteSheet("Player");
-	player.setEscala(1, 1);
+	player.setEscala(0.5, 0.5);
 	player.setAnimacao(0);
 	xPer = gJanela.getLargura() / 2;
 	yPer = gJanela.getAltura() / 2;
@@ -50,34 +54,38 @@ void Personagem::mover()
 		direcao = "direita";
 		player.setAnimacao(0);
 		player.avancarAnimacao();
-		arma.setarPosicao(xPer + 30, yPer);
+		arma.setarPosicao(xPer + 50, yPer);
+		arma.setDirecao(0);
 		return;
 	}
 	if (gTeclado.segurando[TECLA_A] && xPer > 0)
 	{
 		xPer--;
 		direcao = "esquerda";
-		arma.setarPosicao(xPer - 30, yPer);
+		arma.setarPosicao(xPer - 50, yPer);
 		player.setAnimacao(1);
 		player.avancarAnimacao();
+		arma.setDirecao(1);
 		return;
 	}
 	if (gTeclado.segurando[TECLA_W] && yPer > 0)
 	{
 		yPer--;
 		direcao = "cima";
-		arma.setarPosicao(xPer, yPer - 30); 
+		arma.setarPosicao(xPer, yPer - 80); 
 		player.setAnimacao(5);
 		player.avancarAnimacao();
+		arma.setDirecao(3);
 		return;
 	}
 	if (gTeclado.segurando[TECLA_S] && yPer < gJanela.getAltura())
 	{
 		yPer++;
 		direcao = "baixo";
-		arma.setarPosicao(xPer, yPer+30);
+		arma.setarPosicao(xPer, yPer+70);
 		player.setAnimacao(4);
 		player.avancarAnimacao();
+		arma.setDirecao(2);
 		return;
 	}
 }

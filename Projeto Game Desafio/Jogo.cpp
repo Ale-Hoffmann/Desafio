@@ -3,16 +3,25 @@
 Jogo::Jogo()
 {
 	//polimorfismo
-	
+	aux = nullptr;
 	teste[0] = new TelaMenu;
 	teste[1] = new TelaControles;
-	teste[2] = new TelaJogar;
-	teste[3] = new TelaCombate(1);
-	teste[4] = new TelaMorte;
+	teste[2] = new TelaCreditos;
+	teste[3] = new TelaJogar;
+	teste[4] = new TelaCombate(1);
+	teste[5] = new TelaMorte;
 	qTelas = 5;
+
 	telaAtual = 0;
 	Voltar.impilhar(telaAtual);
-
+	telaCombateAtual = 10;
+	aux = new TelaCombate(15);
+	combates.Add(*aux);
+	aux = new TelaCombate(10);
+	combates.Add(*aux);
+	aux = new TelaCombate(20);
+	combates.Add(*aux);
+	*aux = combates.getRaiz();
 }
 
 Jogo::~Jogo()
@@ -27,6 +36,10 @@ void Jogo::inicializar()
 	{
 		teste[i]->inicializar();
 	}
+	aux->inicializar();
+	combates.getDirExpecifico(*aux).inicializar();
+	//combates.getDirExpecifico(combates.getDirExpecifico(aux))->inicializar();
+	combates.getEsqExpecifico(*aux).inicializar();
 }
 
 void Jogo::finalizar()
@@ -50,16 +63,42 @@ void Jogo::executar()
 
 void Jogo::passaTela()
 {
-	if (teste[telaAtual]->Jogou() == true)
+	if (teste[telaAtual]->Jogou() == true && telaAtual != 4)
 	{
 		Voltar.impilhar(telaAtual);
 		telaAtual = teste[telaAtual]->proximaTela();
 	}
-	if (gTeclado.pressionou[TECLA_T])
+	if (gTeclado.pressionou[TECLA_T]&& telaAtual != 4)
 	{
 		telaAtual = Voltar.desempilhar();
 	}
-	teste[telaAtual]->executar();
+	if (telaAtual == 4)
+	{
+		if (combates.getExpecifico(*aux).Jogou() == true && combates.getExpecifico(*aux).proximaTela() != 5)
+		{
+			//ger.escreverNoSave(play.getNome(), aux->getTipo(), play.getCarteira(), 3, 0);
+			if (aux->proximaTela() == 5)
+			{
+				*aux = combates.getEsqExpecifico(*aux);
+			}
+			if (aux->proximaTela() == 10)
+			{
+				*aux = combates.getDirExpecifico(*aux);
+			}
+		}
+		if (aux->proximaTela() == 5)
+		{
+			telaAtual = 5;
+		}
+		if (aux->proximaTela() != 5)
+		{
+			aux->executar();
+		}
+	}
+	if (telaAtual != 4)
+	{
+		teste[telaAtual]->executar();
+	}
 }
 
 

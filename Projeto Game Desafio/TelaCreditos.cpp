@@ -1,5 +1,6 @@
-#include "TelaControles.h"
-void TelaControles::inicializar()
+#include "TelaCreditos.h"
+
+void TelaCreditos::inicializar()
 {
 	carregarArquivo();
 	carregarSprite();
@@ -7,35 +8,31 @@ void TelaControles::inicializar()
 	carregarBotao();
 }
 
-void TelaControles::executar()
+void TelaCreditos::executar()
 {
 	atualizarSprite();
 	//atualizarTexto();
 	atualizarBotao();
 }
 
-void TelaControles::carregarSprite()
+void TelaCreditos::carregarSprite()
 {
-	if (!gRecursos.carregouSpriteSheet(nSprite))
-	{
-gRecursos.carregarSpriteSheet(nSprite, EndSprite);
-	}
-	
+	gRecursos.carregarSpriteSheet(nSprite, EndSprite);
 	fundo.setSpriteSheet(nSprite);
 	fundo.setEscala(1, 1);
 }
 
-void TelaControles::carregarTexto()
+void TelaCreditos::carregarTexto()
 {
-	
+
 }
 
-void TelaControles::carregarArquivo()
+void TelaCreditos::carregarArquivo()
 {
 	string dado;
 
 	ifstream lerArq;
-	lerArq.open("arqTelaControle.txt", ios::in);
+	lerArq.open("arqTelaCreditos.txt", ios::in);
 	if (lerArq.is_open())
 	{
 		do
@@ -68,41 +65,41 @@ void TelaControles::carregarArquivo()
 
 }
 
-void TelaControles::carregarBotao()
+void TelaCreditos::carregarBotao()
 {
-	gRecursos.carregarSpriteSheet(nBotao, EndBotao,2,1);
+	gRecursos.carregarSpriteSheet(nBotao, EndBotao, 2, 1);
 	menu.setSpriteSheet(nBotao);
-	menu.setPos(gJanela.getLargura()/2 - 100, 550);
-	menu.getSprite()->setEscala(0.2 , 0.2);
+	menu.setPos(gJanela.getLargura() / 2 - 100, 550);
+	menu.getSprite()->setEscala(0.2, 0.2);
 }
 
-void TelaControles::atualizarSprite()
+void TelaCreditos::atualizarSprite()
 {
 	fundo.desenhar(gJanela.getLargura() / 2, gJanela.getAltura() / 2);
 }
 
-void TelaControles::atualizarTexto()
+void TelaCreditos::atualizarTexto()
 {
-	
+
 }
 
-void TelaControles::atualizarBotao()
+void TelaCreditos::atualizarBotao()
 {
 	menu.atualizar();
 	menu.desenhar();
 }
 
-bool TelaControles::NovoJogo()
+bool TelaCreditos::NovoJogo()
 {
 	return false;
 }
 
-int TelaControles::qualSave()
+int TelaCreditos::qualSave()
 {
 	return 0;
 }
 
-bool TelaControles::Jogou()
+bool TelaCreditos::Jogou()
 {
 	if (menu.estaClicado())
 	{
@@ -114,7 +111,7 @@ bool TelaControles::Jogou()
 	}
 }
 
-int TelaControles::proximaTela()
+int TelaCreditos::proximaTela()
 {
 	return 0;
 }

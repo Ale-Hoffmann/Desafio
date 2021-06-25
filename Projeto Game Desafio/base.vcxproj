@@ -113,10 +113,12 @@
     <ClCompile Include="Jogo.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Personagem.cpp" />
+    <ClCompile Include="Portal.cpp" />
     <ClCompile Include="Save.cpp" />
     <ClCompile Include="Tela.cpp" />
     <ClCompile Include="TelaCombate.cpp" />
     <ClCompile Include="TelaControles.cpp" />
+    <ClCompile Include="TelaCreditos.cpp" />
     <ClCompile Include="TelaJogar.cpp" />
     <ClCompile Include="TelaMenu.cpp" />
     <ClCompile Include="TelaMorte.cpp" />
@@ -125,6 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arma.h" />
+    <ClInclude Include="Arvore.h" />
     <ClInclude Include="Bala.h" />
     <ClInclude Include="Bicho.h" />
     <ClInclude Include="Bruxa.h" />
@@ -139,14 +142,17 @@
     <ClInclude Include="Jogo.h" />
     <ClInclude Include="Lista.h" />
     <ClInclude Include="Nodo.h" />
+    <ClInclude Include="NodoA.h" />
     <ClInclude Include="NodoF.h" />
     <ClInclude Include="NodoP.h" />
     <ClInclude Include="Personagem.h" />
     <ClInclude Include="Pilha.h" />
+    <ClInclude Include="Portal.h" />
     <ClInclude Include="Save.h" />
     <ClInclude Include="Tela.h" />
     <ClInclude Include="TelaCombate.h" />
     <ClInclude Include="TelaControles.h" />
+    <ClInclude Include="TelaCreditos.h" />
     <ClInclude Include="TelaJogar.h" />
     <ClInclude Include="TelaMenu.h" />
     <ClInclude Include="TelaMorte.h" />

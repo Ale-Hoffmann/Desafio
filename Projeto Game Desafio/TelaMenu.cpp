@@ -115,17 +115,27 @@ void TelaMenu::atualizarBotao()
 	
 }
 
+bool TelaMenu::NovoJogo()
+{
+	return false;
+}
+
+int TelaMenu::qualSave()
+{
+	return 0;
+}
+
 bool TelaMenu::Jogou()
 {
 	if (botoes[0].estaClicado())
 	{
-		pTela = 2;
+		pTela = 4;
 		return true;
 		
 	}
 	if (botoes[1].estaClicado())
 	{
-		pTela = 0;
+		pTela = 2;
 		return true;
 		
 	}

@@ -17,7 +17,11 @@ void TelaMorte::executar()
 
 void TelaMorte::carregarSprite()
 {
+	if (gRecursos.carregouSpriteSheet(nSprite))
+	{
 	gRecursos.carregarSpriteSheet(nSprite, EndSprite);
+	}
+	
 	fundo.setSpriteSheet(nSprite);
 	fundo.setEscala(1.2, 1.5);
 }
@@ -71,7 +75,11 @@ void TelaMorte::carregarArquivo()
 
 void TelaMorte::carregarBotao()
 {
+	if (!gRecursos.carregouSpriteSheet(nBotao))
+	{
 	gRecursos.carregarSpriteSheet(nBotao, EndBotao);
+	}
+	
 	menu.setSpriteSheet(nBotao);
 	menu.setPos(500, 300);
 }
@@ -91,6 +99,16 @@ void TelaMorte::atualizarBotao()
 {
 	menu.atualizar();
 	menu.desenhar();
+}
+
+bool TelaMorte::NovoJogo()
+{
+	return false;
+}
+
+int TelaMorte::qualSave()
+{
+	return 0;
 }
 
 bool TelaMorte::Jogou()
