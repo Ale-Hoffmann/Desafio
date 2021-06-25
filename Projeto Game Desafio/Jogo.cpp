@@ -6,10 +6,16 @@ Jogo::Jogo()
 	aux = nullptr;
 	teste[0] = new TelaMenu;
 	teste[1] = new TelaControles;
+<<<<<<< HEAD
 	teste[2] = new TelaCreditos;
 	teste[3] = new TelaJogar;
 	teste[4] = new TelaCombate(1);
 	teste[5] = new TelaMorte;
+=======
+	teste[2] = new TelaJogar;
+	teste[3] = new TelaCombate;
+	teste[4] = new TelaMorte;
+>>>>>>> parent of d7dc273 (chapéus implementados e saves também)
 	qTelas = 5;
 
 	telaAtual = 0;

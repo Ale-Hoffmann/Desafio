@@ -18,15 +18,23 @@ void Arma::executar()
 
 void Arma::carregarSprite()
 {
+<<<<<<< HEAD
 	
      gRecursos.carregarSpriteSheet("nArma", "../assets/espada.png",4,1);
 	
 	imagem.setSpriteSheet("nArma");
 	imagem.setEscala(0.15,0.15);
+=======
+	gRecursos.carregarSpriteSheet("nArma", "../assets/espada.png");
+	imagem.setSpriteSheet("nArma");
+	
+	imagem.setEscala(4,4);
+>>>>>>> parent of d7dc273 (chapéus implementados e saves também)
 }
 
 void Arma::executarSprite()
 {
+	
 	imagem.desenhar(X, Y);
 	imagem.setAnimacao(dir);
 }

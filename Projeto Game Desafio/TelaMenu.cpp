@@ -29,7 +29,7 @@ void TelaMenu::carregarSprite()
 {
 	gRecursos.carregarSpriteSheet(nSprite, EndSprite);
 	fundo.setSpriteSheet(nSprite);
-	fundo.setEscala(1, 1);
+	fundo.setEscala(1.2, 1.5);
 }
 
 void TelaMenu::carregarTexto()
@@ -84,9 +84,9 @@ void TelaMenu::carregarBotao()
 {
 	for (int i = 0; i < 3; i++)
 	{
-		gRecursos.carregarSpriteSheet(nBotao[i], EndBotao[i],2,1);
+		gRecursos.carregarSpriteSheet(nBotao[i], EndBotao[i],1,2);
 		botoes[i].setSpriteSheet(nBotao[i]);
-		botoes[i].getSprite()->setEscala(0.3, 0.3);
+	
 	}
 	botoes[0].setPos(500, 250);
 	botoes[1].setPos(500, 350);
@@ -110,6 +110,7 @@ void TelaMenu::atualizarBotao()
 	for (int i = 0; i < 3; i++)
 	{
 		botoes[i].atualizar();
+		botoes[i].setAnimacaoDoEstadoComMouseEmCima(0);
 		botoes[i].desenhar();
 	}
 	

@@ -58,6 +58,7 @@
     <ClCompile Include="Bruxa.cpp">
       <Filter>ITENS\CHAPÉUS</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="Usuario.cpp">
       <Filter>BASICO</Filter>
     </ClCompile>
@@ -76,6 +77,8 @@
     <ClCompile Include="TelaCreditos.cpp">
       <Filter>TELAS</Filter>
     </ClCompile>
+=======
+>>>>>>> parent of d7dc273 (chapéus implementados e saves também)
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tela.h">
@@ -150,6 +153,7 @@
     <ClInclude Include="Bruxa.h">
       <Filter>ITENS\CHAPÉUS</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="Usuario.h">
       <Filter>BASICO</Filter>
     </ClInclude>
@@ -174,6 +178,8 @@
     <ClInclude Include="TelaCreditos.h">
       <Filter>TELAS</Filter>
     </ClInclude>
+=======
+>>>>>>> parent of d7dc273 (chapéus implementados e saves também)
   </ItemGroup>
   <ItemGroup>
     <Filter Include="TELAS">

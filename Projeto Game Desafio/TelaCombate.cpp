@@ -193,10 +193,6 @@ void TelaCombate::carregarTexto()
 	vida.setFonte(nTexto);
 	vida.setAlinhamento(TEXTO_CENTRALIZADO);
 	vida.setEscala(1.5, 1.5);
-	dinheiro.setFonte(nTexto);
-	dinheiro.setAlinhamento(TEXTO_CENTRALIZADO);
-	dinheiro.setEscala(1.5, 1.5);
-	dinheiro.setCor(0, 0, 0);
 }
 
 void TelaCombate::carregarArquivo()
@@ -277,8 +273,6 @@ void TelaCombate::atualizarSprite()
 
 void TelaCombate::atualizarTexto()
 {
-	dinheiro.setString("dinheiro: 0");
-	dinheiro.desenhar(500, 30);
 	vida.setString(principal.getTxtVida());
 	vida.desenhar(110, 30);
 }

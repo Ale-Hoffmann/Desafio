@@ -4,8 +4,6 @@ Personagem::Personagem()
 {
 	vida = 2;
 	vivo = true;
-	cap = new Cartola;
-
 }
 
 Personagem::Personagem(int x, int y, int v, int e)
@@ -14,7 +12,6 @@ Personagem::Personagem(int x, int y, int v, int e)
 	yPer = y;
 	vida = v;
 	energia = e;
-	cap = new Cartola;
 }
 
 void Personagem::inicializar()
@@ -30,13 +27,11 @@ void Personagem::inicializar()
 	xPer = gJanela.getLargura() / 2;
 	yPer = gJanela.getAltura() / 2;
 	arma.inicializar();
-	cap->inicializar();
 }
 
 void Personagem::executar()
 { 
 	 arma.executar();
-	 cap->executar();
      player.desenhar(xPer,yPer);
 	 mover();
 	 morrer();
@@ -47,7 +42,6 @@ void Personagem::executar()
 
 void Personagem::mover()
 {
-	cap->setAncora(xPer, yPer);
 	if (gTeclado.segurando[TECLA_D] && xPer < gJanela.getLargura())
 	{
 		xPer++;
@@ -205,11 +199,6 @@ bool Personagem::getVivo()
 Arma Personagem::getArma()
 {
 	return arma;
-}
-
-Chapeus Personagem::getChapeu()
-{
-	return *cap;
 }
 
 

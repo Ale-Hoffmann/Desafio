@@ -6,6 +6,6 @@ class Cartola :
 public:
     Cartola();
 private:
-    
+    Arma *atual;
 };
 

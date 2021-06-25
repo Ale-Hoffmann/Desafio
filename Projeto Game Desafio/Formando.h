@@ -6,6 +6,6 @@ class Formando :
 public:
     Formando();
 private:
-    
+    Arma* atual;
 };
 

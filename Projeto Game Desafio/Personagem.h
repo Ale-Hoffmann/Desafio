@@ -1,7 +1,4 @@
 #pragma once
-#include"Chapeus.h"
-#include"Formando.h"
-#include"Cartola.h"
 #include"Arma.h"
 #include"libUnicornio.h"
 class Personagem
@@ -26,12 +23,10 @@ public:
 	string getTxtVida();
 	bool getVivo();
 	Arma getArma();
-	Chapeus getChapeu();
 
 private:
 	Sprite player;
 	Arma arma;
-	Chapeus* cap;
 	string direcao;
 	int xPer, yPer,vida,energia;
 	bool vivo;
